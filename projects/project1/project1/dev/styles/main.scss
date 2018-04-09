@@ -1,0 +1,30 @@
+@import 'setup';
+
+/*
+Variables
+*/
+
+$backgroundDark:  #eff6ff;
+$backgroundLight:  #fafcff;
+$pColor:  #7d93b2;
+$headerColor: #4c6280;
+
+/*
+Styling All
+*/
+*{
+	font-family: 'Nunito', sans-serif;
+	border: 1px solid aqua;
+};
+
+body{
+	background: $backgroundDark;
+	.container{
+		width: 80%;
+		margin: 0 auto;
+
+		.main-header{
+			
+		}
+	}
+}

@@ -141,8 +141,15 @@ Styling All
   font-family: 'Nunito', sans-serif;
   border: 1px solid aqua; }
 
-body {
-  background: #eff6ff; }
-  body .container {
-    width: 80%;
-    margin: 0 auto; }
+body .container {
+  width: 80%;
+  margin: 0 auto; }
+
+body .wave {
+  background-image: url("../images/home-background-1.png"); }
+
+.backgroundDark {
+  background-color: #eff6ff; }
+
+.backgroundLight {
+  background-color: #fafcff; }

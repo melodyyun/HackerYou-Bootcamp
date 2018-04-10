@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>CSS Exercise</title>
+
+		<!-- TO DO:
+		1. Can you change all p tags to have font-size of 20px?
+		2. Can you add a new class and write a matching CSS rule to turn the last paragraph background blue?
+		3. Turn all paragraphs with a class of warning, the background color red. 
+		4. Can you write a single rule that targets both special and warning and change the font colour?
+
+		Need help? Check out the "CSS Class Selector" section in Intro to CSS notes -->
+
+		<style>
+
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+				line-height: 21px;
+			}
+
+			p{
+				font-size: 20px;
+			}
+
+			.last{
+				background-color: blue;
+			}
+
+			.warning{
+				background-color: red;
+			}
+
+			.special, .warning{
+				color: blueviolet;
+			}
+
+			.fruit.caramel{
+				background: lightblue;
+			}
+
+		</style>
+	</head>
+	<body>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+		<p class="special">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		<p class="warning">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		<p class="special">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		<p class="warning">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		<p class="last">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+
+		<ul class="pie">
+			<li class="fruit cinnamon">Spartan Apple & Cinnamon</li>
+			<li class="chocolate nuts">Chocolate Pecan with Ganache</li>
+			<li class="fruit caramel">Apple Caramel Oat Crumble</li>
+			<li class="pumpkin nuts">Pumpkin Pecan-Praline</li>
+			<li class="cinnamon fruit">Spiced Apple Crisp</li>
+			<li class="fruit caramel">Garden Gold Peach Caramel</li>
+			<li class="chocolate nuts">Walnut Chocolate Chip Cookie</li>
+			<li class="pumpkin nuts">Maple Walnut Pumpkin</li>
+			<li class="cinnamon fruit">Spiced Anjou Pear</li>
+		</ul>
+
+	</body>
+</html>

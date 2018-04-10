@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiple Selector Exercise!</title>
+	<!-- Below is a font, we'll learn more about this later! -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans" rel="stylesheet"> 
+
+	<!-- 1. Write a rule to change the font-size for all pies that have chocolate as well as nuts -->
+	<!-- 2. Write a rule to change all pies that have cinnamon as well as fruit to background of grey -->
+	<!-- 3. Write a rule to change all pies that have pumpkin as well as nuts to orange font colour  -->
+
+	<!-- 	Need help? Check out the "Multiple Selectors" topic in the Intro to CSS class --> 
+
+	<style>
+		body {
+			font-family: 'Work Sans', sans-serif;
+			font-size: 16px;
+		}
+
+		h3 {
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			text-align: center;
+			padding-bottom: 15px;
+			font-size: 30px;
+		}
+
+		ul {
+			list-style: none;
+			font-size: 25px;
+			padding-left: 0;
+			padding-bottom: 40px;
+		}
+
+		li {
+			font-weight: 500;
+			padding: 10px 0;
+			text-transform: none;
+			letter-spacing: 0;
+			text-align: center;
+		}
+		
+		.fruit.caramel {
+		    background: lightblue;
+		}
+	
+		/* 1. Write a rule to change the font-size for all pies that have chocolate as well as nuts: */
+		.chocolate.nuts {
+			font-size: 20px;
+		}
+
+		/*2. Write a rule to change all pies that have cinnamon as well as fruit to background of grey: */
+		.cinnamon.fruit {
+			background: grey;
+		}
+
+		/* 3. Write a rule to change all pies that have pumpkin as well as nuts to orange font colour */
+		.pumpkin.nuts {
+			color: orange;
+		}
+
+	</style>
+</head>
+<body>
+	<h3>Pies</h3>
+	<ul class="pie">
+		<li class="fruit cinnamon">Spartan Apple & Cinnamon</li>
+		<li class="chocolate nuts">Chocolate Pecan with Ganache</li>
+		<li class="fruit caramel">Apple Caramel Oat Crumble</li>
+		<li class="pumpkin nuts">Pumpkin Pecan-Praline</li>
+		<li class="cinnamon fruit">Spiced Apple Crisp</li>
+		<li class="fruit caramel">Garden Gold Peach Caramel</li>
+		<li class="chocolate nuts">Walnut Chocolate Chip Cookie</li>
+		<li class="pumpkin nuts">Maple Walnut Pumpkin</li>
+		<li class="cinnamon fruit">Spiced Anjou Pear</li>
+		<li class="caramel coffee">Salted Coffee Caramel</li>
+	</ul>
+</body>
+</html>

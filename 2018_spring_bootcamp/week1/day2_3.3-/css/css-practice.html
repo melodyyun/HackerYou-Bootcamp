@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h3 {
+            font-size: 20px;
+            }
+        
+        /* responsive */
+
+        section {
+            width: 100%;
+        }
+
+        section aside.sidebar {
+            width: 25%;
+        }
+
+        section main {
+            width: 75%;
+        }
+        /* em => based on base font size (problem with em is that it will continue to multiple off it's parents) */
+
+        html {
+            font-size: 10px;
+        }
+
+        p {
+            font-size: 1.6em; /* Produces 16px : 10px * 1.6 */
+        }
+
+        p span {
+            font-size: 1.6em; /* Produces 25.6px : (10px * 1.6) * 1.6 */
+        }
+
+        /* solve em problem with rem (root em) */
+        html {
+            font-size: 10px;
+        }
+
+        p {
+            font-size: 1.6rem; /* Produces 16px : 10px * 1.6 */
+        }
+
+        p span {
+            font-size: 1.6rem; /* Produces 16px : 10px * 1.6*/
+        }
+
+        /* background */
+        body {
+            background: red url(images/dog2.jpg) top right repeat-y fixed;
+        }
+        /* body {
+        background: [background-color] [background-image] [background-position] [background-repeat] [background-attachment]; */
+
+        /* background gradients */
+        div {
+            background: linear-gradient( 45deg, blue, red );
+        }
+
+        /* div {
+            background: linear-gradient( <angle>, <colour>, <colour> );
+        } */
+
+}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -15,9 +15,27 @@ Styling All
 *{
 	font-family: 'Nunito', sans-serif;
 	border: 1px solid aqua;
-};
+}
+
+html{
+	font-size: 62.5%;
+	line-height: 1.5;
+}
 
 body{
+	.main-nav{
+		display: inline-block;
+		width: 80%;
+		margin: 0 auto;
+		ul{
+			display: inline-block;
+			li{
+				list-style: none;
+				color: $headerColor;
+				display: inline-block;
+			}
+		}
+	}
 
 	.container{
 		width: 80%;
@@ -26,8 +44,10 @@ body{
 	}
 
 	.wave{
-		background-image: url("../images/home-background-1.png");
-
+		background-image: url(../images/home-background-1.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 	}
 }
 

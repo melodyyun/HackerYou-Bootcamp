@@ -141,12 +141,30 @@ Styling All
   font-family: 'Nunito', sans-serif;
   border: 1px solid aqua; }
 
+html {
+  font-size: 62.5%;
+  line-height: 1.5; }
+
+body .main-nav {
+  display: inline-block;
+  width: 80%;
+  margin: 0 auto; }
+  body .main-nav ul {
+    display: inline-block; }
+    body .main-nav ul li {
+      list-style: none;
+      color: #4c6280;
+      display: inline-block; }
+
 body .container {
   width: 80%;
   margin: 0 auto; }
 
 body .wave {
-  background-image: url("../images/home-background-1.png"); }
+  background-image: url(../images/home-background-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .backgroundDark {
   background-color: #eff6ff; }

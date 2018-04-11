@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>CSS Floats</title>
+		<style type="text/css">
+			body {
+				margin: 0; /* Just overriding the browser default to zero */
+				background:#95A9AF;
+			}
+
+			/* Box sizing border box and clearfix */
+			* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+			.clearfix:after {
+				visibility: hidden;
+				display: block;
+				font-size: 0;
+				content: " ";
+				clear: both;
+				height: 0;
+				}
+			* html .clearfix             { zoom: 1; } /* IE6 */
+			*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+			/* 
+				This one has  the regular header, content and sidebar divs
+				You may use pixels for this one if thats easier
+
+				in the content make the .post divs three to a line
+				in the sidebar make the .widget divs separate
+				in the header center and adjust letter spacing
+				There are hover styles on .post and the links in the sidebar
+				match the styling best you can to the answer
+
+				All selectors are written for you EXCEPT the hover states
+
+			*/
+			
+			.wrapper {
+				border:2px solid black;
+				margin:20px auto;
+				background:white;
+				width:1000px;
+				border-radius: 10px;
+			}
+
+			/* Header */
+
+			.header {
+				text-align: center;
+				font-family: sans-serif;
+				letter-spacing: 10px;
+				text-transform: uppercase;
+			}
+
+			/* Content */
+			.content {
+				padding:20px;
+				width: 75%;
+				float: left;
+			}
+			.content .post {
+				background:#F5F5F5;
+				border:1px solid #ccc;
+				width: 32%;
+				float: left;
+				padding: 10px;
+				border-radius: 5px;
+				margin-right: 1%;
+				margin-bottom: 1.5%;
+			}
+
+				.content .post img {
+					width: 99%;
+				}
+				.content .post:hover{
+					background-color: lightgray;
+				}
+
+			/* Sidebar */
+			.sidebar {
+				float: right;
+				width: 25%;
+				padding: 20px;
+			}
+			.widget {
+				background:#D8E2E6;
+				padding: 15px 20px;
+				margin-bottom: 5%;
+			}
+				.widget ul {
+					list-style-position: inside;
+					list-style-type:square;
+					padding-left: 0;
+				}
+
+				.widget a {
+					color: black;
+					text-shadow: 1px 1px 0 #fff;
+				}
+
+				.widget a:hover{
+					padding-left: 10px;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper clearfix">
+			<div class="header">
+				<h1>I love CSS!</h1>
+			</div>
+			<div class="content">
+				<div class="post">
+					<img src="http://hackeryou.com/wp-content/uploads/2012/05/course-slideshow1-350x235.jpg" alt="">
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				</div>
+				<div class="post">
+					<img src="http://hackeryou.com/wp-content/uploads/2012/05/course-slideshow1-350x235.jpg" alt="">
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				</div>
+				<div class="post">
+					<img src="http://hackeryou.com/wp-content/uploads/2012/05/course-slideshow1-350x235.jpg" alt="">
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				</div>
+				<div class="post">
+					<img src="http://hackeryou.com/wp-content/uploads/2012/05/course-slideshow1-350x235.jpg" alt="">
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				</div>
+				<div class="post">
+					<img src="http://hackeryou.com/wp-content/uploads/2012/05/course-slideshow1-350x235.jpg" alt="">
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				</div>
+				<div class="post">
+					<img src="http://hackeryou.com/wp-content/uploads/2012/05/course-slideshow1-350x235.jpg" alt="">
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="widget">
+					<h3>Dog Links</h3>
+					<ul>
+						<li><a href="#">Link #1</a></li>
+						<li><a href="#">Link #2</a></li>
+						<li><a href="#">Link #3</a></li>
+						<li><a href="#">Link #4</a></li>
+					</ul>
+				</div>
+
+				<div class="widget">
+					<h3>Cat Links</h3>
+					<ul>
+						<li><a href="#">Link #1</a></li>
+						<li><a href="#">Link #2</a></li>
+						<li><a href="#">Link #3</a></li>
+						<li><a href="#">Link #4</a></li>
+					</ul>
+				</div>
+
+				<div class="widget">
+					<h3>Bird Links</h3>
+					<ul>
+						<li><a href="#">Link #1</a></li>
+						<li><a href="#">Link #2</a></li>
+						<li><a href="#">Link #3</a></li>
+						<li><a href="#">Link #4</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

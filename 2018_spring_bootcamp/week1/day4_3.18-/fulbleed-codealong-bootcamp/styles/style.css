@@ -83,9 +83,16 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 .main-section img{
     width: 100%;
+    /* gets rid of ghost space at bottom of image */
+    display: block
+}
+
+.main-section li:nth-child(3n){
+    margin-right: 0;
 }
 .main-section li{
     display: inline-block;
     float: left;
-    width: calc(100%/3);
+    width: calc((100 - 20px) / 3);
+    margin: 0 10px 10px 0;
 }

@@ -1,3 +1,49 @@
+
+.wave {
+  background-image: url(../images/home-background-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.backgroundDark {
+  background-color: #eff6ff; }
+
+.backgroundLight {
+  background-color: #fafcff; }
+
+.button {
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem; }
+
+.red-button {
+  background-color: #ff5c72;
+  color: #fff;
+  -webkit-box-shadow: 10px 15px 20px #ceddf2;
+          box-shadow: 10px 15px 20px #ceddf2; }
+
+.clear-button {
+  background-color: transparent;
+  color: #7d93b2;
+  border: 1px #7d93b2 solid; }
+
+.clear-button:hover {
+  -webkit-animation-name: toRedButtonHover;
+          animation-name: toRedButtonHover;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+/*
+1. variables 
+2. general styling
+3. base styling for all three pages
+4. navigation
+5. footer
+*/
+/*--------
+1. Variables
+--------*/
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -131,18 +177,50 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/*--------
-Variables
---------*/
+.wave {
+  background-image: url(../images/home-background-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.backgroundDark {
+  background-color: #eff6ff; }
+
+.backgroundLight {
+  background-color: #fafcff; }
+
+.button {
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem; }
+
+.red-button {
+  background-color: #ff5c72;
+  color: #fff;
+  -webkit-box-shadow: 10px 15px 20px #ceddf2;
+          box-shadow: 10px 15px 20px #ceddf2; }
+
+.clear-button {
+  background-color: transparent;
+  color: #7d93b2;
+  border: 1px #7d93b2 solid; }
+
+.clear-button:hover {
+  -webkit-animation-name: toRedButtonHover;
+          animation-name: toRedButtonHover;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
 /*---------
-Styling All
+2. Styling All
 ----------*/
 * {
   font-family: 'Nunito', sans-serif;
   border: 1px solid aqua; }
 
 /*---
-Base
+3. Base
 -----*/
 html {
   font-size: 62.5%;
@@ -153,8 +231,12 @@ html {
 body {
   font-size: 1.6rem; }
 
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
 /*---------
-Navigation
+4. Navigation
 ----------*/
 .main-nav {
   top: 0;
@@ -226,41 +308,3 @@ ul {
   border: none;
   color: #4c6280; }
 
-.container {
-  width: 80%;
-  margin: 0 auto; }
-
-.wave {
-  background-image: url(../images/home-background-1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-
-.backgroundDark {
-  background-color: #eff6ff; }
-
-.backgroundLight {
-  background-color: #fafcff; }
-
-.button {
-  border-radius: 5px;
-  padding: 0.5rem 1.5rem; }
-
-.red-button {
-  background-color: #ff5c72;
-  color: #fff;
-  -webkit-box-shadow: 10px 15px 20px #ceddf2;
-          box-shadow: 10px 15px 20px #ceddf2; }
-
-.clear-button {
-  background-color: transparent;
-  color: #7d93b2;
-  border: 1px #7d93b2 solid; }
-
-.clear-button:hover {
-  -webkit-animation-name: toRedButtonHover;
-          animation-name: toRedButtonHover;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }

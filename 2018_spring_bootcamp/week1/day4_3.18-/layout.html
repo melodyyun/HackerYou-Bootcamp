@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>advanced layout</title>
+    <style>
+        article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+        
+        .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+        
+        * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+        header{
+            background: #89EF12;
+            /* margin collapse fix */
+            overflow: hidden;
+            padding: 1px;
+        }
+
+        .main-content{
+            background: #119F84;
+            width: calc(70% - 20px);
+            margin-right: 20px;
+        }
+
+        aside{
+            background: rgb(240, 157, 186);
+            width: 30%;
+        }
+
+        .main-content, aside{
+            float: left;
+        }
+
+        footer{
+            background: #28e0ee;
+            overflow: hidden;
+        }
+
+        .wrapper{
+            max-width: 800px;
+            margin: 0 auto;
+            height: 100vh;
+            background: #EEEEEE;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Cool website</h1>
+        </header>
+        <div class="clearfix">
+            <section class="main-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet maxime accusamus inventore sint deserunt ipsam
+                    possimus maiores? Soluta quam possimus, aliquam harum voluptatum eius ut praesentium facere mollitia iusto sapiente
+                    hic ratione recusandae quo tempore eum atque aperiam, nemo provident voluptate repellat temporibus deleniti dicta.
+                    Obcaecati dignissimos, repellat impedit dolores molestias commodi. Reiciendis cupiditate iste architecto quia earum
+                    eveniet nisi ratione, dolor, non nulla at nesciunt laboriosam illo harum error, tenetur itaque esse repudiandae sit
+                    dicta laborum et sequi! Natus, nesciunt rem? Soluta quibusdam impedit, maiores dignissimos facere quam? Doloribus
+                    delectus voluptates quibusdam optio cupiditate numquam ullam consequatur accusamus?</p>
+            </section>
+            <aside>
+                <ul>
+                    <li>Menu Item1</li>
+                    <li>Menu Item2</li>
+                    <li>Menu Item3</li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+            <p>&copy;copyright website 2018</p>
+        </footer>
+    </div>
+</body>
+</html>

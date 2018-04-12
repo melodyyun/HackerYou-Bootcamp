@@ -1,49 +1,37 @@
 
-.wave {
+.main-header {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto; }
+  .main-header h1 {
+    color: #4c6280;
+    font-size: 4.8rem;
+    font-weight: 300;
+    line-height: 7.2rem; }
+  .main-header p {
+    line-height: 3.6rem; }
+  .main-header img {
+    text-align: center;
+    width: 100%; }
+
+.waveBackground {
   background-image: url(../images/home-background-1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
 
-.backgroundDark {
-  background-color: #eff6ff; }
+.about {
+  padding: 5em 0; }
+  .about img {
+    float: left;
+    width: 45%;
+    margin-right: 2em; }
+  .about .about-text {
+    float: left;
+    width: 45%;
+    margin-left: 2em;
+    padding: 2em; }
 
-.backgroundLight {
-  background-color: #fafcff; }
-
-.button {
-  border-radius: 5px;
-  padding: 0.5rem 1.5rem; }
-
-.red-button {
-  background-color: #ff5c72;
-  color: #fff;
-  -webkit-box-shadow: 10px 15px 20px #ceddf2;
-          box-shadow: 10px 15px 20px #ceddf2; }
-
-.clear-button {
-  background-color: transparent;
-  color: #7d93b2;
-  border: 1px #7d93b2 solid; }
-
-.clear-button:hover {
-  -webkit-animation-name: toRedButtonHover;
-          animation-name: toRedButtonHover;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-/*
-1. variables 
-2. general styling
-3. base styling for all three pages
-4. navigation
-5. footer
-*/
-/*--------
-1. Variables
---------*/
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -165,6 +153,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
+/* clearfix */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -173,44 +162,55 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clear: both;
   height: 0; }
 
+/* border-box */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.wave {
+/*
+1. variables 
+2. general styling
+3. base styling for all three pages
+	3.1 background colors
+	3.2 button styling
+4. navigation
+5. footer
+*/
+/*--------
+1. Variables
+--------*/
+.main-header {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto; }
+  .main-header h1 {
+    color: #4c6280;
+    font-size: 4.8rem;
+    font-weight: 300;
+    line-height: 7.2rem; }
+  .main-header p {
+    line-height: 3.6rem; }
+  .main-header img {
+    text-align: center;
+    width: 100%; }
+
+.waveBackground {
   background-image: url(../images/home-background-1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
 
-.backgroundDark {
-  background-color: #eff6ff; }
-
-.backgroundLight {
-  background-color: #fafcff; }
-
-.button {
-  border-radius: 5px;
-  padding: 0.5rem 1.5rem; }
-
-.red-button {
-  background-color: #ff5c72;
-  color: #fff;
-  -webkit-box-shadow: 10px 15px 20px #ceddf2;
-          box-shadow: 10px 15px 20px #ceddf2; }
-
-.clear-button {
-  background-color: transparent;
-  color: #7d93b2;
-  border: 1px #7d93b2 solid; }
-
-.clear-button:hover {
-  -webkit-animation-name: toRedButtonHover;
-          animation-name: toRedButtonHover;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
+.about {
+  padding: 5em 0; }
+  .about img {
+    float: left;
+    width: 45%;
+    margin-right: 2em; }
+  .about .about-text {
+    float: left;
+    width: 45%;
+    margin-left: 2em;
+    padding: 2em; }
 
 /*---------
 2. Styling All
@@ -232,8 +232,62 @@ body {
   font-size: 1.6rem; }
 
 .container {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto; }
+
+p {
+  color: #7d93b2; }
+
+h3 {
+  margin: 0;
+  text-align: center;
+  color: #4c6280;
+  font-size: 3.6rem;
+  font-weight: 300;
+  line-height: 5.4rem; }
+
+hr {
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 1px solid #ceddf2;
+  padding: 0; }
+
+/*----------------
+Background colors
+-----------------*/
+.backgroundDark {
+  background-color: #eff6ff; }
+
+.backgroundLight {
+  background-color: #fafcff; }
+
+/*--------
+Buttons
+---------*/
+.button {
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem; }
+
+.red-button {
+  background-color: #ff5c72;
+  color: #fff;
+  -webkit-box-shadow: 10px 15px 20px #ceddf2;
+          box-shadow: 10px 15px 20px #ceddf2;
+  border: none; }
+
+.clear-button {
+  background-color: transparent;
+  color: #7d93b2;
+  border: 1px #7d93b2 solid; }
+
+.clear-button:hover {
+  -webkit-animation-name: toRedButtonHover;
+          animation-name: toRedButtonHover;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
 
 /*---------
 4. Navigation

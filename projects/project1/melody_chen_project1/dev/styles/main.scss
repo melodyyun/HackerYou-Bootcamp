@@ -1,7 +1,11 @@
+@import 'setup';
+
 /*
 1. variables 
 2. general styling
 3. base styling for all three pages
+	3.1 background colors
+	3.2 button styling
 4. navigation
 5. footer
 */
@@ -19,7 +23,6 @@ $red: rgb(255, 92, 114);
 $transparentRed: rgba(255, 92, 114, 0.836);
 $white: #fff;
 
-@import 'setup';
 @import 'home';
 @import 'features';
 @import 'pricing';
@@ -48,13 +51,78 @@ body{
 }
 
 .container{
-	width: 80%;
+	max-width: 80%;
 	margin: 0 auto;
 }
+
+p{
+	color: $pColor;
+}
+
+h3{
+	margin: 0;
+	text-align: center;
+	color: $headerColor;
+	font-size: 3.6rem;
+	font-weight: 300;
+	line-height: 5.4rem;
+}
+
+hr{
+	display: block;
+	height: 2px;
+	border: 0;
+	border-top: 1px solid $lightNavy;
+	padding: 0;
+}
+
+/*----------------
+Background colors
+-----------------*/
+
+// background colors
+.backgroundDark{
+	background-color: $backgroundDark;
+}
+
+.backgroundLight{
+	background-color: $backgroundLight;
+}
+
+/*--------
+Buttons
+---------*/
+//buttons
+.button{
+	border-radius: 5px;
+	padding: 0.5rem 1.5rem;	
+}
+.red-button{
+	background-color: $red;
+	color: $white;
+	box-shadow: 10px 15px 20px $lightNavy;
+	border: none;
+	:hover{
+
+	}
+}
+
+.clear-button{
+	background-color: transparent;
+	color: $pColor;
+	border: 1px $pColor solid;
+}
+		.clear-button:hover{
+				animation-name: toRedButtonHover;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;  
+		}
 
 /*---------
 4. Navigation
 ----------*/
+
+//nav styling
 .main-nav{
 	top: 0;
 	display: inline-block;
@@ -129,6 +197,5 @@ ul{
 	color: $headerColor;
 }
 //nav END----------
-
 
 

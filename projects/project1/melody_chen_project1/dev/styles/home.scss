@@ -1,0 +1,43 @@
+
+
+.wave{
+	background-image: url(../images/home-background-1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+// background colors
+.backgroundDark{
+	background-color: $backgroundDark;
+}
+
+.backgroundLight{
+	background-color: $backgroundLight;
+}
+
+//buttons
+.button{
+	border-radius: 5px;
+	padding: 0.5rem 1.5rem;	
+}
+.red-button{
+	background-color: $red;
+	color: $white;
+	box-shadow: 10px 15px 20px $lightNavy;
+	:hover{
+
+	}
+}
+
+.clear-button{
+	background-color: transparent;
+	color: $pColor;
+	border: 1px $pColor solid;
+}
+		.clear-button:hover{
+				animation-name: toRedButtonHover;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;  
+		}

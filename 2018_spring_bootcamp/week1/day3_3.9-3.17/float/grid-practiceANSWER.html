@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Practice</title>
+	<!--
+	This exercise will get you use floats and creating galleries. If you need help, check out the Layout class.
+	-->
+
+	<!--
+	Exercise:
+	1. For the first set of images (grid1), create a 3x3 grid with no margin and 2% padding around the images
+	2. For the second set of images (grid2), create a 2x2 grid with 1% margin between the images and 10px padding around the images
+
+	-->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+
+		/*adding some borders here so we can see what's going on with our parent elements*/
+		.wrapper {
+			max-width: 1000px;
+			border: 2px solid grey;
+			/*centre everything*/
+			margin: 0 auto;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		/*1. For the first set of images (grid1), create a 3x3 grid with no margin and 2% padding around the images */
+		.grid1 {
+			border: 2px solid #bada55;
+		}
+
+		.grid1 .container {
+			float: left;
+			width: 33%;
+			padding: 2%;
+			margin: 0;
+		}
+
+		/*2. For the second set of images (grid2), create a 2x2 grid with 1% margin between the images and 10px padding around the images*/
+		.grid2 {
+			border: 2px solid darksalmon;
+		}
+
+		.grid2 .container {
+			background: seagreen;
+			float: left;
+			width: 48%; /* we have to account for 1% margin on either side of our containers! 50 - 2 = 48 */
+			margin: 1%;
+			padding: 10px;
+		}
+
+		</style>
+	</head>
+	<body>
+		<!-- we're using a wrapper div to contain and center the grids! -->
+		<div class="wrapper">
+
+			<!-- make a 3x3 grid with no margin and 2% padding around the images -->
+			<div class="grid1 clearfix">
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/900/900" alt="">
+				</div>
+			</div>
+
+			<!-- make a 2x2 grid with 1% margin between the images and 10px padding around the images  -->
+			<div class="grid2 clearfix">
+				<div class="container">
+					<img src="http://unsplash.it/400/300" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/400/300" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/400/300" alt="">
+				</div>
+				<div class="container">
+					<img src="http://unsplash.it/400/300" alt="">
+				</div>
+			</div>
+
+		</div> <!-- ./wrapper -->
+
+
+	</body>
+	</html>

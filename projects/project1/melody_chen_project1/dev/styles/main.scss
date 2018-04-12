@@ -1,7 +1,13 @@
-@import 'setup';
+/*
+1. variables 
+2. general styling
+3. base styling for all three pages
+4. navigation
+5. footer
+*/
 
 /*--------
-Variables
+1. Variables
 --------*/
 
 $backgroundDark:  #eff6ff;
@@ -13,8 +19,13 @@ $red: rgb(255, 92, 114);
 $transparentRed: rgba(255, 92, 114, 0.836);
 $white: #fff;
 
+@import 'setup';
+@import 'home';
+@import 'features';
+@import 'pricing';
+
 /*---------
-Styling All
+2. Styling All
 ----------*/
 *{
 	font-family: 'Nunito', sans-serif;
@@ -22,7 +33,7 @@ Styling All
 }
 
 /*---
-Base
+3. Base
 -----*/
 html{
 	//sets root em to 10px
@@ -36,8 +47,13 @@ body{
 	font-size: 1.6rem;
 }
 
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+
 /*---------
-Navigation
+4. Navigation
 ----------*/
 .main-nav{
 	top: 0;
@@ -114,49 +130,5 @@ ul{
 }
 //nav END----------
 
-.container{
-	width: 80%;
-	margin: 0 auto;
-}
-
-.wave{
-	background-image: url(../images/home-background-1.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
 
 
-// background colors
-.backgroundDark{
-	background-color: $backgroundDark;
-}
-
-.backgroundLight{
-	background-color: $backgroundLight;
-}
-
-//buttons
-.button{
-	border-radius: 5px;
-	padding: 0.5rem 1.5rem;	
-}
-.red-button{
-	background-color: $red;
-	color: $white;
-	box-shadow: 10px 15px 20px $lightNavy;
-	:hover{
-
-	}
-}
-
-.clear-button{
-	background-color: transparent;
-	color: $pColor;
-	border: 1px $pColor solid;
-}
-		.clear-button:hover{
-				animation-name: toRedButtonHover;
-				animation-duration: 1s;
-				animation-fill-mode: forwards;  
-		}

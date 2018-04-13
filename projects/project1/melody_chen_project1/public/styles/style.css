@@ -37,7 +37,10 @@
   -webkit-box-shadow: 1px 1px 5px #ceddf2;
           box-shadow: 1px 1px 5px #ceddf2;
   padding: 3rem;
-  margin-right: 1.5rem; }
+  margin-right: 1.5rem;
+  min-height: 500px; }
+  .learnHow .feature-box p {
+    min-height: 180px; }
 
 .learnHow .feature-box:last-child {
   margin-right: 0; }
@@ -59,11 +62,36 @@
 
 .laptop-img {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: block; }
 
-.company-logos p {
-  float: left;
-  padding: 1px; }
+.company-logos {
+  padding: 8rem 0;
+  width: 100%; }
+  .company-logos p {
+    float: left;
+    padding: 1px;
+    margin: 0 4rem 0 0; }
+  .company-logos img {
+    padding: 0 2%;
+    max-width: calc((100% 308px - 1rem * 6) / 6); }
+
+.question {
+  position: relative; }
+  .question img {
+    float: left; }
+  .question .question-container {
+    float: left;
+    width: calc((100% - 5rem) / 2); }
+    .question .question-container p {
+      display: inline-block;
+      float: left; }
+  .question .question-container:nth-child(odd) {
+    margin-right: 5rem; }
+  .question button {
+    margin: 0 auto;
+    min-width: 50px;
+    display: block; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -250,7 +278,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-shadow: 1px 1px 5px #ceddf2;
           box-shadow: 1px 1px 5px #ceddf2;
   padding: 3rem;
-  margin-right: 1.5rem; }
+  margin-right: 1.5rem;
+  min-height: 500px; }
+  .learnHow .feature-box p {
+    min-height: 180px; }
 
 .learnHow .feature-box:last-child {
   margin-right: 0; }
@@ -272,17 +303,43 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .laptop-img {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: block; }
 
-.company-logos p {
-  float: left;
-  padding: 1px; }
+.company-logos {
+  padding: 8rem 0;
+  width: 100%; }
+  .company-logos p {
+    float: left;
+    padding: 1px;
+    margin: 0 4rem 0 0; }
+  .company-logos img {
+    padding: 0 2%;
+    max-width: calc((100% 308px - 1rem * 6) / 6); }
+
+.question {
+  position: relative; }
+  .question img {
+    float: left; }
+  .question .question-container {
+    float: left;
+    width: calc((100% - 5rem) / 2); }
+    .question .question-container p {
+      display: inline-block;
+      float: left; }
+  .question .question-container:nth-child(odd) {
+    margin-right: 5rem; }
+  .question button {
+    margin: 0 auto;
+    min-width: 50px;
+    display: block; }
 
 /*---------
 2. Styling All
 ----------*/
 * {
-  font-family: 'Nunito', sans-serif; }
+  font-family: 'Nunito', sans-serif;
+  border: 1px solid aqua; }
 
 /*-------------------------
 3. Base for all three pages
@@ -295,10 +352,10 @@ html {
   html body {
     font-size: 1.6rem; }
     html body .container {
-      max-width: 80%;
+      max-width: 1530px;
       margin: 0 auto; }
     html body section {
-      padding: 8rem 0 8rem 0; }
+      padding: 10rem 0 10rem 0; }
     html body p {
       color: #7d93b2;
       line-height: 3.6rem; }
@@ -341,8 +398,10 @@ Buttons
 .red-button {
   background-color: #ff5c72;
   color: #fff;
-  -webkit-box-shadow: 10px 15px 20px #ceddf2;
-          box-shadow: 10px 15px 20px #ceddf2;
+  -webkit-box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
+          box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
+  width: 205px;
+  height: 48px;
   border: none; }
 
 .clear-button {

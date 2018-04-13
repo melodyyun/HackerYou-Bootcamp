@@ -23,6 +23,7 @@ $red: rgb(255, 92, 114);
 $transparentRed: rgba(255, 92, 114, 0.836);
 $white: #fff;
 
+
 @import 'home';
 @import 'features';
 @import 'pricing';
@@ -32,7 +33,7 @@ $white: #fff;
 ----------*/
 *{
 	font-family: 'Nunito', sans-serif;
-	// border: 1px solid aqua;
+	border: 1px solid aqua;
 }
 
 /*-------------------------
@@ -47,13 +48,13 @@ html{
 	body{
 		font-size: 1.6rem;
 		.container{
-			// max-width: 1530px;
-			max-width: 80%;
+			max-width: 1530px;
+			// max-width: 80%;
 			margin: 0 auto;
 		}
 
 		section{
-			padding: 8rem 0 8rem 0;
+			padding: 10rem 0 10rem 0;
 		}
 		
 		p{
@@ -114,7 +115,12 @@ Buttons
 .red-button{
 	background-color: $red;
 	color: $white;
-	box-shadow: 10px 15px 20px $lightNavy;
+	// box-shadow: 10px 15px 20px $lightNavy;
+	box-shadow: 0px 20px 30px 0px     rgba(125, 147, 178, 0.3);
+    width: 205px;
+    height: 48px;
+
+;
 	border: none;
 	:hover{
 

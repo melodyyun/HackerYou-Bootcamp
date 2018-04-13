@@ -65,6 +65,10 @@ $lightestBlue: rgb(206, 221, 242);
 		box-shadow: 1px 1px 5px $lightestBlue;
 		padding: 3rem;
 		margin-right: 1.5rem;
+		min-height: 500px;
+		p{
+			min-height: 180px;
+		}
 	}
 
 	.feature-box:last-child{
@@ -98,15 +102,52 @@ $lightestBlue: rgb(206, 221, 242);
 	// width: 1010px;
 	width: 100%;
 	margin: 0 auto;
+	//fix ghost space
+	display: block;
 }
 
 //company logos
 .company-logos{
+	padding: 8rem 0;
+	width: 100%;
+
 	p{
 		float: left;
 		padding: 1px;
+		margin: 0 4rem 0 0;
+	}
+	img{
+		padding: 0 2%;
+		max-width: calc((100% 308px - 1rem * 6) / 6);
 	}
 }
+
+//questions
+
+.question{
+	position: relative;
+	img{
+		float: left;
+	}
+	.question-container{
+		float: left;
+		width: calc((100% - 5rem) / 2);
+		p{
+			display: inline-block;
+			float: left;
+		}
+	}
+	.question-container:nth-child(odd){
+			margin-right: 5rem;
+	}
+	button{
+		margin: 0 auto;
+		min-width: 50px;
+		display: block;
+	}
+}
+
+
 
 
 

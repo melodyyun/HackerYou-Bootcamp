@@ -1,36 +1,69 @@
 
 .main-header {
   text-align: center;
-  max-width: 50%;
+  max-width: 600px;
   margin: 0 auto; }
   .main-header h1 {
     color: #4c6280;
     font-size: 4.8rem;
     font-weight: 300;
     line-height: 7.2rem; }
-  .main-header p {
-    line-height: 3.6rem; }
   .main-header img {
     text-align: center;
     width: 100%; }
-
-.waveBackground {
-  background-image: url(../images/home-background-1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
 
 .about {
   padding: 5em 0; }
   .about img {
     float: left;
-    width: 45%;
+    width: calc(55% - 2em);
     margin-right: 2em; }
   .about .about-text {
+    position: relative;
     float: left;
-    width: 45%;
-    margin-left: 2em;
-    padding: 2em; }
+    width: calc(45%);
+    padding: 0 2em;
+    top: 50%; }
+
+.learnHow .feature-boxes {
+  padding-top: 5rem; }
+
+.learnHow .feature-box {
+  float: left;
+  max-width: calc((100% - (1.5rem * 3)) / 4);
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px #ceddf2;
+          box-shadow: 1px 1px 5px #ceddf2;
+  padding: 3rem;
+  margin-right: 1.5rem; }
+
+.learnHow .feature-box:last-child {
+  margin-right: 0; }
+
+.explore {
+  padding-bottom: 0; }
+  .explore .container {
+    padding: 0; }
+  .explore p {
+    max-width: 80%;
+    margin: 3rem auto;
+    text-align: center; }
+  .explore .explore-buttons {
+    max-width: 40%;
+    margin: 5rem auto;
+    text-align: center; }
+    .explore .explore-buttons button {
+      width: 150px; }
+
+.laptop-img {
+  width: 100%;
+  margin: 0 auto; }
+
+.company-logos p {
+  float: left;
+  padding: 1px; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -181,86 +214,122 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 --------*/
 .main-header {
   text-align: center;
-  max-width: 50%;
+  max-width: 600px;
   margin: 0 auto; }
   .main-header h1 {
     color: #4c6280;
     font-size: 4.8rem;
     font-weight: 300;
     line-height: 7.2rem; }
-  .main-header p {
-    line-height: 3.6rem; }
   .main-header img {
     text-align: center;
     width: 100%; }
+
+.about {
+  padding: 5em 0; }
+  .about img {
+    float: left;
+    width: calc(55% - 2em);
+    margin-right: 2em; }
+  .about .about-text {
+    position: relative;
+    float: left;
+    width: calc(45%);
+    padding: 0 2em;
+    top: 50%; }
+
+.learnHow .feature-boxes {
+  padding-top: 5rem; }
+
+.learnHow .feature-box {
+  float: left;
+  max-width: calc((100% - (1.5rem * 3)) / 4);
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px #ceddf2;
+          box-shadow: 1px 1px 5px #ceddf2;
+  padding: 3rem;
+  margin-right: 1.5rem; }
+
+.learnHow .feature-box:last-child {
+  margin-right: 0; }
+
+.explore {
+  padding-bottom: 0; }
+  .explore .container {
+    padding: 0; }
+  .explore p {
+    max-width: 80%;
+    margin: 3rem auto;
+    text-align: center; }
+  .explore .explore-buttons {
+    max-width: 40%;
+    margin: 5rem auto;
+    text-align: center; }
+    .explore .explore-buttons button {
+      width: 150px; }
+
+.laptop-img {
+  width: 100%;
+  margin: 0 auto; }
+
+.company-logos p {
+  float: left;
+  padding: 1px; }
+
+/*---------
+2. Styling All
+----------*/
+* {
+  font-family: 'Nunito', sans-serif; }
+
+/*-------------------------
+3. Base for all three pages
+---------------------------*/
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%; }
+  html body {
+    font-size: 1.6rem; }
+    html body .container {
+      max-width: 80%;
+      margin: 0 auto; }
+    html body section {
+      padding: 8rem 0 8rem 0; }
+    html body p {
+      color: #7d93b2;
+      line-height: 3.6rem; }
+    html body h3 {
+      margin: 0;
+      text-align: center;
+      color: #4c6280;
+      font-size: 3.6rem;
+      font-weight: 300;
+      line-height: 5.4rem; }
+    html body hr {
+      display: block;
+      height: 2px;
+      border: 0;
+      border-top: 1px solid #ceddf2;
+      padding: 0; }
+
+/*---------
+Background 
+-----------*/
+.backgroundDark {
+  background-color: #eff6ff; }
+
+.backgroundLight {
+  background-color: #fafcff; }
 
 .waveBackground {
   background-image: url(../images/home-background-1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-
-.about {
-  padding: 5em 0; }
-  .about img {
-    float: left;
-    width: 45%;
-    margin-right: 2em; }
-  .about .about-text {
-    float: left;
-    width: 45%;
-    margin-left: 2em;
-    padding: 2em; }
-
-/*---------
-2. Styling All
-----------*/
-* {
-  font-family: 'Nunito', sans-serif;
-  border: 1px solid aqua; }
-
-/*---
-3. Base
------*/
-html {
-  font-size: 62.5%;
-  line-height: 1.5;
-  width: 100%;
-  height: 100%; }
-
-body {
-  font-size: 1.6rem; }
-
-.container {
-  max-width: 80%;
-  margin: 0 auto; }
-
-p {
-  color: #7d93b2; }
-
-h3 {
-  margin: 0;
-  text-align: center;
-  color: #4c6280;
-  font-size: 3.6rem;
-  font-weight: 300;
-  line-height: 5.4rem; }
-
-hr {
-  display: block;
-  height: 2px;
-  border: 0;
-  border-top: 1px solid #ceddf2;
-  padding: 0; }
-
-/*----------------
-Background colors
------------------*/
-.backgroundDark {
-  background-color: #eff6ff; }
-
-.backgroundLight {
-  background-color: #fafcff; }
 
 /*--------
 Buttons

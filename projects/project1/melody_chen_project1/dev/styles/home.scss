@@ -7,11 +7,12 @@ $lightNavy: rgb(206, 221, 242);
 $red: rgb(255, 92, 114);
 $transparentRed: rgba(255, 92, 114, 0.836);
 $white: #fff;
+$lightestBlue: rgb(206, 221, 242);
 
 //header section
 .main-header{
 	text-align: center;
-	max-width: 50%;
+	max-width: 600px;
 	margin: 0 auto;
 
 	h1{
@@ -21,22 +22,15 @@ $white: #fff;
 		line-height: 7.2rem;
 	}
 
-	p{
-		line-height: 3.6rem;
-	}
-
 	img{
 		text-align: center;
 		width: 100%;
 	}
 }
-//wave background transition
-.waveBackground{
-	background-image: url(../images/home-background-1.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
+
+// .section-top-padding{
+// 	padding: 8rem 0 6rem 0;
+// }
 
 //about section
 .about{
@@ -44,16 +38,75 @@ $white: #fff;
 
 	img{
 		float: left;
-		width: 45%;
+		width: calc(55% - 2em);
 		margin-right: 2em;
 	}
 	.about-text{
+		position: relative;
 		float: left;
-		width: 45%;
-		margin-left: 2em;
-		padding: 2em;
+		width: calc(45%);
+		padding: 0 2em;
+		top: 50%;
 	}
 
 }
+
+//learnHow section
+.learnHow{
+	.feature-boxes{
+		padding-top: 5rem;
+	}
+	.feature-box{
+		float: left;
+		max-width: calc((100% - (1.5rem * 3)) / 4);
+		text-align: center;
+		background-color: $white;
+		border-radius: 5px;
+		box-shadow: 1px 1px 5px $lightestBlue;
+		padding: 3rem;
+		margin-right: 1.5rem;
+	}
+
+	.feature-box:last-child{
+		margin-right: 0;
+	}
+}
+
+//explore section
+.explore{
+	// margin-bottom: -9px;
+	padding-bottom: 0;
+	.container{
+		// margin-bottom: -8px;
+		padding: 0;
+	}
+	p{
+		max-width: 80%;
+		margin: 3rem auto;
+		text-align: center;
+	}
+	.explore-buttons{
+		max-width: 40%;
+		margin: 5rem auto;
+		text-align: center;
+		button{
+			width: 150px;
+		}
+	}
+}
+.laptop-img{
+	// width: 1010px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+//company logos
+.company-logos{
+	p{
+		float: left;
+		padding: 1px;
+	}
+}
+
 
 

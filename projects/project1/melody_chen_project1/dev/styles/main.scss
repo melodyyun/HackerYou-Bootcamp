@@ -34,7 +34,7 @@ $box-shadow: rgba(125, 147, 178, 0.3);
 ----------*/
 *{
 	font-family: 'Nunito', sans-serif;
-	border: 1px solid aqua;
+	// border: 1px solid aqua;
 }
 
 /*-------------------------
@@ -96,6 +96,9 @@ html{
 		a{
 			text-decoration: none;
 		}
+		.bolded{
+			font-weight: 700;
+		}
 	}
 }
 
@@ -128,7 +131,6 @@ Background
     background-image: url(../images/page-footer-image.png);
 	background-position: bottom;
     background-repeat: no-repeat;
-    height: 1700px;
 }
 
 /*--------
@@ -148,6 +150,7 @@ Buttons
 	box-shadow: 0px 20px 30px 0px $box-shadow;
 	border: none;
 	:hover{
+		background-color: transparent;
 		//RED BUTTON HOVER EFFECT!!!!!!!!!!!!
 	}
 	a{
@@ -176,15 +179,32 @@ Buttons
 	display: inline-block;
 	width: 100%;
 	margin: 0 auto;
-	table{
-		width: 100%;
-	}
-	td{
-		width: 33.33%;
-	}
+	position: relative;
 	.nav-container{
 		padding: 3rem 0;
 	}
+}
+#nav-home-button{
+	position: relative;
+}
+.nav-dropdown{
+	display: none;
+	position: absolute;
+	background-color: $backgroundLight;
+	border: solid 2px $backgroundDark;
+	border-radius: 8px;
+	width:150px;
+	a{
+		display: block;
+	}
+	li{
+		margin: 0;
+		padding: 1rem;
+	}
+}
+
+#nav-home-button:hover .nav-dropdown{
+	display: block;
 }
 
 ul{	

@@ -122,6 +122,7 @@
             transform: translate(-50%, -50%);
     padding: 6rem; }
 
+@charset "UTF-8";
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -400,6 +401,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin-top: 6rem;
   margin-bottom: 5rem; }
 
+#pricing-form {
+  height: 1700px; }
+
 .pricing-form-container {
   border-radius: 8px;
   max-width: 990px;
@@ -449,20 +453,59 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .privacy-header {
   text-align: left;
   max-width: 721px;
-  margin-top: 6rem;
-  margin-bottom: 5rem; }
+  margin-top: 6rem; }
   .privacy-header .privacy-title {
-    text-align: right; }
+    text-align: left;
+    margin: 0; }
 
-.privacy-text {
-  max-width: 1010px; }
+#privacy {
+  height: 2700px;
+  margin-top: -16rem; }
+  #privacy .privacy-text {
+    max-width: 1010px;
+    float: left;
+    margin-right: 15.1rem; }
+    #privacy .privacy-text h3 {
+      text-align: left;
+      margin: 5rem 0 4rem 0; }
+    #privacy .privacy-text h4 {
+      color: #4c6280;
+      font-weight: 400;
+      line-height: 3.6rem;
+      font-size: 2.4rem; }
+    #privacy .privacy-text ul {
+      margin-left: 3rem; }
+      #privacy .privacy-text ul li {
+        display: block;
+        color: #7d93b2; }
+      #privacy .privacy-text ul .no-list-decoration::before {
+        content: ""; }
+      #privacy .privacy-text ul li::before {
+        content: "•";
+        /* Insert content that looks like bullets */
+        padding-right: 8px; }
+  #privacy .privacy-links {
+    float: left;
+    color: #7d93b2;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    font-weight: 400; }
+    #privacy .privacy-links ul {
+      margin: 0; }
+    #privacy .privacy-links li {
+      display: block;
+      border-radius: 8px;
+      width: 360px;
+      height: 64px;
+      padding: 1.5rem; }
+    #privacy .privacy-links li:hover {
+      background-color: #e5f0ff; }
 
 /*---------
 2. Styling All
 ----------*/
 * {
-  font-family: 'Nunito', sans-serif;
-  border: 1px solid aqua; }
+  font-family: 'Nunito', sans-serif; }
 
 /*-------------------------
 3. Base for all three pages
@@ -507,6 +550,8 @@ html {
       padding: 0; }
     html body a {
       text-decoration: none; }
+    html body .bolded {
+      font-weight: 700; }
 
 /*---------
 Background 
@@ -527,8 +572,7 @@ Background
 .hot-air-balloon {
   background-image: url(../images/page-footer-image.png);
   background-position: bottom;
-  background-repeat: no-repeat;
-  height: 1700px; }
+  background-repeat: no-repeat; }
 
 /*--------
 Buttons
@@ -545,6 +589,8 @@ Buttons
   -webkit-box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
           box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
   border: none; }
+  .red-button :hover {
+    background-color: transparent; }
   .red-button a {
     color: #fff; }
 
@@ -568,13 +614,29 @@ Buttons
   top: 0;
   display: inline-block;
   width: 100%;
-  margin: 0 auto; }
-  .main-nav table {
-    width: 100%; }
-  .main-nav td {
-    width: 33.33%; }
+  margin: 0 auto;
+  position: relative; }
   .main-nav .nav-container {
     padding: 3rem 0; }
+
+#nav-home-button {
+  position: relative; }
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fafcff;
+  border: solid 2px #eff6ff;
+  border-radius: 8px;
+  width: 150px; }
+  .nav-dropdown a {
+    display: block; }
+  .nav-dropdown li {
+    margin: 0;
+    padding: 1rem; }
+
+#nav-home-button:hover .nav-dropdown {
+  display: block; }
 
 ul {
   display: inline-block;
@@ -671,6 +733,9 @@ ul {
   margin-top: 6rem;
   margin-bottom: 5rem; }
 
+#pricing-form {
+  height: 1700px; }
+
 .pricing-form-container {
   border-radius: 8px;
   max-width: 990px;
@@ -714,16 +779,57 @@ ul {
     .pricing-form-container .terms-and-conditions a:hover {
       cursor: pointer; }
 
+@charset "UTF-8";
 /*--------
 1. Variables
 --------*/
 .privacy-header {
   text-align: left;
   max-width: 721px;
-  margin-top: 6rem;
-  margin-bottom: 5rem; }
+  margin-top: 6rem; }
   .privacy-header .privacy-title {
-    text-align: right; }
+    text-align: left;
+    margin: 0; }
 
-.privacy-text {
-  max-width: 1010px; }
+#privacy {
+  height: 2700px;
+  margin-top: -16rem; }
+  #privacy .privacy-text {
+    max-width: 1010px;
+    float: left;
+    margin-right: 15.1rem; }
+    #privacy .privacy-text h3 {
+      text-align: left;
+      margin: 5rem 0 4rem 0; }
+    #privacy .privacy-text h4 {
+      color: #4c6280;
+      font-weight: 400;
+      line-height: 3.6rem;
+      font-size: 2.4rem; }
+    #privacy .privacy-text ul {
+      margin-left: 3rem; }
+      #privacy .privacy-text ul li {
+        display: block;
+        color: #7d93b2; }
+      #privacy .privacy-text ul .no-list-decoration::before {
+        content: ""; }
+      #privacy .privacy-text ul li::before {
+        content: "•";
+        /* Insert content that looks like bullets */
+        padding-right: 8px; }
+  #privacy .privacy-links {
+    float: left;
+    color: #7d93b2;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    font-weight: 400; }
+    #privacy .privacy-links ul {
+      margin: 0; }
+    #privacy .privacy-links li {
+      display: block;
+      border-radius: 8px;
+      width: 360px;
+      height: 64px;
+      padding: 1.5rem; }
+    #privacy .privacy-links li:hover {
+      background-color: #e5f0ff; }

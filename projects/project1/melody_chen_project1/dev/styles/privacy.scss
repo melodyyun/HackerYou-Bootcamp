@@ -7,6 +7,7 @@ $backgroundLight:  #fafcff;
 $pColor:  #7d93b2;
 $headerColor: #4c6280;
 $lightNavy: rgb(206, 221, 242);
+$privacyLinkHover: #e5f0ff;
 $red: rgb(255, 92, 114);
 $transparentRed: rgba(255, 92, 114, 0.836);
 $white: #fff;
@@ -17,12 +18,68 @@ $box-shadow: rgba(125, 147, 178, 0.3);
     text-align: left;
     max-width: 721px;
     margin-top: 6rem;
-    margin-bottom: 5rem;
     .privacy-title{
         text-align: left;
+        margin: 0;
     }
 }
 
-.privacy-text{
-    max-width: 1010px;
+#privacy{
+    height: 2700px;
+    margin-top: -16rem;
+    .privacy-text{
+        max-width: 1010px;
+        float: left;
+        margin-right: 15.1rem;
+        
+        h3{
+            text-align: left;
+            margin: 5rem 0 4rem 0;
+        }
+        h4{
+            color: $headerColor;
+            font-weight: 400;
+            line-height: 3.6rem;
+            font-size: 2.4rem;
+        }
+        ul{
+            margin-left: 3rem;
+            li{
+                display: block;
+                color: $pColor;
+            }
+            .no-list-decoration::before{
+                content: "";
+            }
+            li::before {
+                content: "•"; /* Insert content that looks like bullets */
+                padding-right: 8px;
+            }
+        }
+    }
+    .privacy-links{
+        float: left;
+        color: $pColor;  
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        font-weight: 400;
+        ul{
+            margin: 0;
+        }
+        li{
+            display: block;
+            border-radius: 8px;
+            width: 360px;
+            height: 64px;
+            padding: 1.5rem;
+            // margin: 5rem 0;
+        }
+        // li:first-child{
+        //     // margin-top: 5rem;
+        // }
+        li:hover{
+            background-color: $privacyLinkHover;
+        }
+    }
+
 }

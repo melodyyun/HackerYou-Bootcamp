@@ -8,30 +8,20 @@ $red: rgb(255, 92, 114);
 $transparentRed: rgba(255, 92, 114, 0.836);
 $white: #fff;
 $lightestBlue: rgb(206, 221, 242);
-$boxShadow: rgba(125, 147, 178, 0.3);
+$box-shadow: rgba(125, 147, 178, 0.3);
 
 //header section
 .main-header{
 	text-align: center;
-	max-width: 600px;
+	max-width: 800px;
 	margin: 0 auto;
-
-	h1{
-		color: $headerColor;
-		font-size: 4.8rem;
-		font-weight: 300;
-		line-height: 7.2rem;
-	}
 
 	img{
 		text-align: center;
 		width: 100%;
+		max-width: 600px;
 	}
 }
-
-// .section-top-padding{
-// 	padding: 8rem 0 6rem 0;
-// }
 
 //about section
 .about{
@@ -43,13 +33,13 @@ $boxShadow: rgba(125, 147, 178, 0.3);
 		margin-right: 2em;
 	}
 	.about-text{
+		min-height: 500px;
 		position: relative;
 		float: left;
 		width: calc(45%);
-		padding: 0 2em;
+		padding: 10rem 2em;
 		top: 50%;
 	}
-
 }
 
 //learnHow section
@@ -95,7 +85,7 @@ $boxShadow: rgba(125, 147, 178, 0.3);
 		margin: 5rem auto;
 		text-align: center;
 		button{
-			width: 150px;
+			width: 250px;
 		}
 	}
 }
@@ -111,32 +101,43 @@ $boxShadow: rgba(125, 147, 178, 0.3);
 .company-logos{
 	padding: 8rem 0;
 	width: 100%;
+	margin: 0 auto;
 
 	p{
 		float: left;
 		padding: 1px;
 		margin: 0 4rem 0 0;
+		width: 20%;
+		min-width: 320px;
+	}
+	.logos-container{
+		float: right;
 	}
 	img{
-		padding: 0 2%;
-		max-width: calc((100% 308px - 1rem * 6) / 6);
+		padding-left: 8rem;
+		width: calc((100% 308px - 1rem * 6) / 6);
 	}
 }
 
 //questions
-
 .question{
 	position: relative;
 	img{
 		float: left;
+		padding-top: 5px;
 	}
 	.question-container{
 		float: left;
 		width: calc((100% - 5rem) / 2);
-		p{
-			display: inline-block;
-			float: left;
-		}
+			h4{
+				display: inline;
+				color: $headerColor;
+				font-size: 2.4rem;
+				font-weight: 400;
+				line-height: 3.6rem;
+				text-align: left;
+				margin: 0;
+			}
 	}
 	.question-container:nth-child(odd){
 			margin-right: 5rem;
@@ -145,6 +146,30 @@ $boxShadow: rgba(125, 147, 178, 0.3);
 		margin: 0 auto;
 		min-width: 50px;
 		display: block;
+	}
+}
+
+//intergrate Sigma
+.intergrate{
+	position: relative;
+	height: 1000px;
+	background-image: url(../images/home-footer-background.png),
+	linear-gradient(180deg, $backgroundLight 50%, $backgroundDark 50%);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	// background-size: cover;
+	.white-box{
+		max-width: 490px;
+		min-height: 360px;
+		text-align: center;
+		background-color: $white;
+		margin: 0 auto;
+		box-shadow: 0px 8px 15px 0px $box-shadow;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		padding: 6rem;
 	}
 }
 

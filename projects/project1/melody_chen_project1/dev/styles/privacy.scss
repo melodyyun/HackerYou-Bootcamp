@@ -1,0 +1,28 @@
+/*--------
+1. Variables
+--------*/
+
+$backgroundDark:  #eff6ff;
+$backgroundLight:  #fafcff;
+$pColor:  #7d93b2;
+$headerColor: #4c6280;
+$lightNavy: rgb(206, 221, 242);
+$red: rgb(255, 92, 114);
+$transparentRed: rgba(255, 92, 114, 0.836);
+$white: #fff;
+$box-shadow: rgba(125, 147, 178, 0.3);
+
+//heading
+.privacy-header{
+    text-align: left;
+    max-width: 721px;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    .privacy-title{
+        text-align: left;
+    }
+}
+
+.privacy-text{
+    max-width: 1010px;
+}

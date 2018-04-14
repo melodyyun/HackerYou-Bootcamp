@@ -36,43 +36,43 @@
 	<div class="wrapper">
 		<!-- Nav Bar -->
 		<nav class="main-nav backgroundDark">
-			<div class="container">
-				<table>
-					<tr>
-						<td>
-							<a href="#main-nav"><img src="public/images/logo.png" alt="Signma Logo"></a>
-						</td>
-						<td>
-							<ul class="nav-middle">
-								<li>
-									<a id="home" href="#main-nav">Home
-										<i class="fas fa-angle-down"></i>
-									</a>
-								</li>
-								<li>
-									<a href="features.html">Feature</a>
-								</li>
-								<li>
-									<a href="pricing.html">Pricing</a>
-								</li>
-							</ul>
-						</td>
-						<td>
-							<ul class="nav-right">
-								<li>
-									<button class="button red-button">Get the Sigma</button>
-								</li>
-								<li>
-									<button id="en">En
-										<i class="fas fa-angle-down"></i>
-									</button>
-								</li>
-							</ul>
-						</td>
-					</tr>
-				</table>
+			<div class="container nav-container">
+				<a href="index.html">
+					<img src="public/images/logo.png" alt="Signma Logo">
+				</a>
+				<ul class="nav-middle">
+					<li>
+						<a id="home" href="index.html">Home
+							<span class="drop-down">
+								<i class="fas fa-angle-down"></i>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="index.html#learnHow">Feature</a>
+					</li>
+					<li>
+						<a href="pricing.html">Pricing</a>
+					</li>
+				</ul>
+				<ul class="nav-right">
+					<li>
+						<a id="no-hover-effect" href="pricing.html">
+							<button class="button red-button">
+								Get the Sigma
+							</button>
+						</a>
+					</li>
+					<li>
+						<button id="en">En
+							<span class="drop-down">
+								<i class="fas fa-angle-down"></i>
+						</button>
+					</li>
+				</ul>
 			</div>
-		</nav><!--nav end  -->
+		</nav>
+		<!-- Nav end  -->
 
 		<!-- Header -->
 		<header id="main-header" class="main-header">
@@ -84,7 +84,9 @@
 		<div class="waveBackground">
 				<div class="main-header">
 					<img src="public/images/home-mockup-1.png" alt="Sigma App on laptop">
-					<button class="button red-button">Start Using for Free</button>
+					<a href="pricing.html"><button class="button red-button">
+						 Start Using for Free
+					</button></a>
 					<button class=" button clear-button">Explore Features</button>
 				</div>
 		</div><!-- Wave transition -->
@@ -96,8 +98,7 @@
 					<img src="public/images/home-mockup-2.png" alt="Main page of Sigma messanger App">
 					<div class="about-text">
 						<h3 class="section-title">What is Sigma?</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus culpa labore aliquid officiis hic impedit expedita?
-							Itaque, sapiente libero.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus culpa labore aliquid officiis hic impedit expedita? Itaque, sapiente libero. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, facere?</p>
 						<button class=" button clear-button">Learn more about Sigma</button>
 					</div>
 				</div>
@@ -146,8 +147,12 @@
 					<h3 class="section-title">A native app for every platform</h3>
 					<p>cloud-based mobile and desktop messaging app with a focus on security and speed. You can use it in any platform.</p>
 					<div class="explore-buttons">
-						<button class=" button red-button">Start Using for </button>
-						<button class="button clear-button">Explore</button>
+						<a href="pricing.html">
+							<button class="button red-button">
+								Start Using for Free
+							</button>
+						</a>
+						<button class=" button clear-button">Explore Features</button>
 					</div>
 					<img class ="laptop-img" src="public/images/home-mockup-3.png" alt="Sigma on Laptop Full Screen">
 				</div>
@@ -155,18 +160,22 @@
 
 			<!-- company logos -->
 			<aside class="company-logos backgroundLight">
-				<div class="container">
-					<p>Used by over 1,000,000 people worldwide</p>
-					<div class="logos-container">
-						<img src="public/images/home-logo-1.png" alt="logo 1">
-						<img src="public/images/home-logo-2.png" alt="logo 2">
-						<img src="public/images/home-logo-3.png" alt="logo 3">
-						<img src="public/images/home-logo-4.png" alt="logo 4">
-						<img src="public/images/home-logo-5.png" alt="logo 5">
-						<img src="public/images/home-logo-6.png" alt="logo 6">
+				<div class="container clearfix">
+						<p>Used by over 1,000,000 people worldwide</p>
+						<div class="logos-container">
+							<img src="public/images/home-logo-1.png" alt="logo 1">
+							<img src="public/images/home-logo-2.png" alt="logo 2">
+							<img src="public/images/home-logo-3.png" alt="logo 3">
+							<img src="public/images/home-logo-4.png" alt="logo 4">
+							<img src="public/images/home-logo-5.png" alt="logo 5">
+							<img src="public/images/home-logo-6.png" alt="logo 6">
 					</div>
 				</div>
 			</aside><!-- company logos end -->
+
+			<div class="backgroundLight">
+				<hr class="container">
+			</div>
 
 			<!-- questions -->
 			<section id="questions" class="backgroundLight question">
@@ -209,33 +218,49 @@
 				</div>
 			</section><!-- questions end-->
 
+			<div class="backgroundLight">
+				<hr class="container">
+			</div>
+
 			<!-- intergrate Sigma -->
-			<section id="intergrate backgroundLight">
-				<h3 class="section-title">Integrate Sigma across all your platforms</h3>
-					<div class="intergration-info">
-						<img src="public/images/logo.png" alt="Sigma logo">
-						<p>Integrate Sigma across all your platforms, in just seconds. Connect from most remote locations and synchronize your chats across all your devices</p>
-						<button class="button red-button">Start using for</button>
-					</div>
+			<section id="intergrate" class="intergrate">
+					<h3 class="section-title">Integrate Sigma across all your platforms</h3>
+					<div class="white-box">
+						<div class="intergration-info">
+							<img src="public/images/logo.png" alt="Sigma logo">
+							<p>Integrate Sigma across all your platforms, in just seconds. Connect from most remote locations and synchronize your chats across all your devices</p>
+							<a href="pricing.html">
+								<button class="button red-button">
+									Start Using for Free
+								</button>
+							</a>
+						</div>
+				</div>
 			</section><!-- intergrate end -->
 		
 		</div> <!-- Main end -->
 
 		<!-- footer -->
-		<footer id="footer" class="footer">
-			<img src="/public/images/logo-icon.png" alt="Sigma logo icon">
-			<ul>
-				<li><a href="http://">About</a></li>
-				<li><a href="http://">FA</a></li>
-				<li><a href="http://">Privacy</a></li>
-			</ul>
-			<ul>
-				<li><a href="http://"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="http://"><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href="http://"><i class="fab fa-linkedin-in"></i></a></li>
-			</ul>
-			<hr id="footer-hr">
+		<footer id="footer" class="footer backgroundLight">
+			<div class="container">
+				<div class="footer-top">
+					<img src="/public/images/logo-icon.png" alt="Sigma logo icon">
+					<ul class="footer-menu">
+						<li><a href="http://">About</a></li>
+						<li><a href="http://">FA</a></li>
+						<li><a href="http://">Privacy</a></li>
+					</ul>
+					<ul class="social-media-links">
+						<li><a href="http://"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="http://"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="http://"><i class="fab fa-linkedin-in"></i></a></li>
+					</ul>
+				</div>
+			<div class="backgroundLight">
+				<hr>
+			</div>
 			<p id="copyright">©2017 Sigma-Featured as App Presentation PSD Template | Made by</p>
+			</div>
 		</footer><!-- footer end -->
 
 	</div><!-- wrapper end -->

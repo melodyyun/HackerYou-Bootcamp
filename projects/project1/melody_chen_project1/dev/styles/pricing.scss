@@ -1,0 +1,74 @@
+/*--------
+1. Variables
+--------*/
+
+$backgroundDark:  #eff6ff;
+$backgroundLight:  #fafcff;
+$pColor:  #7d93b2;
+$headerColor: #4c6280;
+$lightNavy: rgb(206, 221, 242);
+$red: rgb(255, 92, 114);
+$transparentRed: rgba(255, 92, 114, 0.836);
+$white: #fff;
+$box-shadow: rgba(125, 147, 178, 0.3);
+$input-border: #ceddf2;
+
+//header
+.pricing-header{
+   margin-top: 6rem;
+   margin-bottom: 5rem;
+}
+
+//form 
+.pricing-form-container{
+    border-radius: 8px;
+    max-width: 990px;
+    margin: 0 auto;
+    background: $white;
+    box-shadow: 0px 20px 30px 0px $box-shadow;
+    height: 898px;
+    padding: 10rem 20rem;
+    h3{
+        text-align: left;
+    }
+    input{
+        border-radius: 8px;
+        border-width: 2px;
+        border-color:$input-border;
+        border-style: solid;
+        background-color:$white;
+        height: 44px;
+        width: 584px;
+        margin: 1rem 0 2rem 0;
+        padding: 1rem;
+    }
+    #checkbox{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 1rem;
+    }
+    .input-name{
+        max-width: 282px;
+        float: left;
+        input{
+            max-width: 282px;
+        }
+    }
+    .input-name:first-child{
+        margin-right: 20px;
+    }
+    .form-terms{
+        font-weight: 700;
+        color: $red;
+    }
+    .terms-and-conditions{
+        padding: 4rem 0 3rem 0;
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            cursor: pointer;
+        }
+    }
+}

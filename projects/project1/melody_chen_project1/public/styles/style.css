@@ -1,16 +1,11 @@
-
 .main-header {
   text-align: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto; }
-  .main-header h1 {
-    color: #4c6280;
-    font-size: 4.8rem;
-    font-weight: 300;
-    line-height: 7.2rem; }
   .main-header img {
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    max-width: 600px; }
 
 .about {
   padding: 5em 0; }
@@ -19,10 +14,11 @@
     width: calc(55% - 2em);
     margin-right: 2em; }
   .about .about-text {
+    min-height: 500px;
     position: relative;
     float: left;
     width: calc(45%);
-    padding: 0 2em;
+    padding: 10rem 2em;
     top: 50%; }
 
 .learnHow .feature-boxes {
@@ -58,7 +54,7 @@
     margin: 5rem auto;
     text-align: center; }
     .explore .explore-buttons button {
-      width: 150px; }
+      width: 250px; }
 
 .laptop-img {
   width: 100%;
@@ -67,31 +63,64 @@
 
 .company-logos {
   padding: 8rem 0;
-  width: 100%; }
+  width: 100%;
+  margin: 0 auto; }
   .company-logos p {
     float: left;
     padding: 1px;
-    margin: 0 4rem 0 0; }
+    margin: 0 4rem 0 0;
+    width: 20%;
+    min-width: 320px; }
+  .company-logos .logos-container {
+    float: right; }
   .company-logos img {
-    padding: 0 2%;
-    max-width: calc((100% 308px - 1rem * 6) / 6); }
+    padding-left: 8rem;
+    width: calc((100% 308px - 1rem * 6) / 6); }
 
 .question {
   position: relative; }
   .question img {
-    float: left; }
+    float: left;
+    padding-top: 5px; }
   .question .question-container {
     float: left;
     width: calc((100% - 5rem) / 2); }
-    .question .question-container p {
-      display: inline-block;
-      float: left; }
+    .question .question-container h4 {
+      display: inline;
+      color: #4c6280;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 3.6rem;
+      text-align: left;
+      margin: 0; }
   .question .question-container:nth-child(odd) {
     margin-right: 5rem; }
   .question button {
     margin: 0 auto;
     min-width: 50px;
     display: block; }
+
+.intergrate {
+  position: relative;
+  height: 1000px;
+  background-image: url(../images/home-footer-background.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fafcff), color-stop(50%, #eff6ff));
+  background-image: url(../images/home-footer-background.png), linear-gradient(180deg, #fafcff 50%, #eff6ff 50%);
+  background-position: bottom;
+  background-repeat: no-repeat; }
+  .intergrate .white-box {
+    max-width: 490px;
+    min-height: 360px;
+    text-align: center;
+    background-color: #fff;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 8px 15px 0px rgba(125, 147, 178, 0.3);
+            box-shadow: 0px 8px 15px 0px rgba(125, 147, 178, 0.3);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 6rem; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -242,16 +271,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 --------*/
 .main-header {
   text-align: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto; }
-  .main-header h1 {
-    color: #4c6280;
-    font-size: 4.8rem;
-    font-weight: 300;
-    line-height: 7.2rem; }
   .main-header img {
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    max-width: 600px; }
 
 .about {
   padding: 5em 0; }
@@ -260,10 +285,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     width: calc(55% - 2em);
     margin-right: 2em; }
   .about .about-text {
+    min-height: 500px;
     position: relative;
     float: left;
     width: calc(45%);
-    padding: 0 2em;
+    padding: 10rem 2em;
     top: 50%; }
 
 .learnHow .feature-boxes {
@@ -299,7 +325,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     margin: 5rem auto;
     text-align: center; }
     .explore .explore-buttons button {
-      width: 150px; }
+      width: 250px; }
 
 .laptop-img {
   width: 100%;
@@ -308,31 +334,128 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .company-logos {
   padding: 8rem 0;
-  width: 100%; }
+  width: 100%;
+  margin: 0 auto; }
   .company-logos p {
     float: left;
     padding: 1px;
-    margin: 0 4rem 0 0; }
+    margin: 0 4rem 0 0;
+    width: 20%;
+    min-width: 320px; }
+  .company-logos .logos-container {
+    float: right; }
   .company-logos img {
-    padding: 0 2%;
-    max-width: calc((100% 308px - 1rem * 6) / 6); }
+    padding-left: 8rem;
+    width: calc((100% 308px - 1rem * 6) / 6); }
 
 .question {
   position: relative; }
   .question img {
-    float: left; }
+    float: left;
+    padding-top: 5px; }
   .question .question-container {
     float: left;
     width: calc((100% - 5rem) / 2); }
-    .question .question-container p {
-      display: inline-block;
-      float: left; }
+    .question .question-container h4 {
+      display: inline;
+      color: #4c6280;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 3.6rem;
+      text-align: left;
+      margin: 0; }
   .question .question-container:nth-child(odd) {
     margin-right: 5rem; }
   .question button {
     margin: 0 auto;
     min-width: 50px;
     display: block; }
+
+.intergrate {
+  position: relative;
+  height: 1000px;
+  background-image: url(../images/home-footer-background.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fafcff), color-stop(50%, #eff6ff));
+  background-image: url(../images/home-footer-background.png), linear-gradient(180deg, #fafcff 50%, #eff6ff 50%);
+  background-position: bottom;
+  background-repeat: no-repeat; }
+  .intergrate .white-box {
+    max-width: 490px;
+    min-height: 360px;
+    text-align: center;
+    background-color: #fff;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 8px 15px 0px rgba(125, 147, 178, 0.3);
+            box-shadow: 0px 8px 15px 0px rgba(125, 147, 178, 0.3);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 6rem; }
+
+/*--------
+1. Variables
+--------*/
+.pricing-header {
+  margin-top: 6rem;
+  margin-bottom: 5rem; }
+
+.pricing-form-container {
+  border-radius: 8px;
+  max-width: 990px;
+  margin: 0 auto;
+  background: #fff;
+  -webkit-box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
+          box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
+  height: 898px;
+  padding: 10rem 20rem; }
+  .pricing-form-container h3 {
+    text-align: left; }
+  .pricing-form-container input {
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: #ceddf2;
+    border-style: solid;
+    background-color: #fff;
+    height: 44px;
+    width: 584px;
+    margin: 1rem 0 2rem 0;
+    padding: 1rem; }
+  .pricing-form-container #checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem; }
+  .pricing-form-container .input-name {
+    max-width: 282px;
+    float: left; }
+    .pricing-form-container .input-name input {
+      max-width: 282px; }
+  .pricing-form-container .input-name:first-child {
+    margin-right: 20px; }
+  .pricing-form-container .form-terms {
+    font-weight: 700;
+    color: #ff5c72; }
+  .pricing-form-container .terms-and-conditions {
+    padding: 4rem 0 3rem 0; }
+    .pricing-form-container .terms-and-conditions a {
+      text-decoration: none; }
+    .pricing-form-container .terms-and-conditions a:hover {
+      cursor: pointer; }
+
+/*--------
+1. Variables
+--------*/
+.privacy-header {
+  text-align: left;
+  max-width: 721px;
+  margin-top: 6rem;
+  margin-bottom: 5rem; }
+  .privacy-header .privacy-title {
+    text-align: right; }
+
+.privacy-text {
+  max-width: 1010px; }
 
 /*---------
 2. Styling All
@@ -351,11 +474,21 @@ html {
   height: 100%; }
   html body {
     font-size: 1.6rem; }
+    html body .wrapper {
+      max-width: 1920px;
+      margin: 0 auto; }
     html body .container {
       max-width: 1530px;
       margin: 0 auto; }
     html body section {
       padding: 10rem 0 10rem 0; }
+    html body h1 {
+      color: #4c6280;
+      font-size: 4.8rem;
+      font-weight: 300;
+      line-height: 7.2rem;
+      max-width: 600px;
+      margin: 0 auto; }
     html body p {
       color: #7d93b2;
       line-height: 3.6rem; }
@@ -372,6 +505,8 @@ html {
       border: 0;
       border-top: 1px solid #ceddf2;
       padding: 0; }
+    html body a {
+      text-decoration: none; }
 
 /*---------
 Background 
@@ -386,23 +521,32 @@ Background
   background-image: url(../images/home-background-1.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  min-height: 550px; }
+
+.hot-air-balloon {
+  background-image: url(../images/page-footer-image.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 1700px; }
 
 /*--------
 Buttons
 ---------*/
 .button {
   border-radius: 5px;
-  padding: 0.5rem 1.5rem; }
+  padding: 0.5rem 1.5rem;
+  height: 4.8rem;
+  min-width: 205px; }
 
 .red-button {
   background-color: #ff5c72;
   color: #fff;
   -webkit-box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
           box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
-  width: 205px;
-  height: 48px;
   border: none; }
+  .red-button a {
+    color: #fff; }
 
 .clear-button {
   background-color: transparent;
@@ -429,6 +573,8 @@ Buttons
     width: 100%; }
   .main-nav td {
     width: 33.33%; }
+  .main-nav .nav-container {
+    padding: 3rem 0; }
 
 ul {
   display: inline-block;
@@ -437,10 +583,10 @@ ul {
     margin-left: 0;
     list-style: none;
     color: #4c6280;
-    display: inline-block; }
+    display: inline-block;
+    padding-right: 2rem; }
     ul li a {
       color: #4c6280;
-      text-decoration: none;
       border-radius: 5px;
       padding: 2px 10px; }
     ul li a:hover {
@@ -451,6 +597,12 @@ ul {
               animation-duration: 1s;
       -webkit-animation-fill-mode: forwards;
               animation-fill-mode: forwards; }
+    ul li .drop-down {
+      padding: 0 1rem; }
+    ul li #no-hover-effect:hover {
+      color: #fff;
+      -webkit-animation: none;
+              animation: none; }
 
 @-webkit-keyframes toRedButtonHover {
   from {
@@ -477,8 +629,8 @@ ul {
 .nav-middle {
   position: relative;
   left: 50%;
-  -webkit-transform: translatex(-50%);
-          transform: translatex(-50%); }
+  -webkit-transform: translatex(-80%);
+          transform: translatex(-80%); }
 
 .nav-right {
   float: right;
@@ -490,3 +642,88 @@ ul {
   border: none;
   color: #4c6280; }
 
+/*---------
+4. Footer
+----------*/
+.footer {
+  height: 250px;
+  line-height: 2rem; }
+  .footer .footer-top {
+    padding: 3rem 0; }
+    .footer .footer-top img {
+      padding-right: 3rem; }
+    .footer .footer-top li {
+      padding: 0 2rem; }
+  .footer a {
+    color: #7d93b2; }
+  .footer .social-media-links {
+    float: right; }
+  .footer hr {
+    height: 1px; }
+  .footer p {
+    padding: 2rem 0;
+    margin: 0; }
+
+/*--------
+1. Variables
+--------*/
+.pricing-header {
+  margin-top: 6rem;
+  margin-bottom: 5rem; }
+
+.pricing-form-container {
+  border-radius: 8px;
+  max-width: 990px;
+  margin: 0 auto;
+  background: #fff;
+  -webkit-box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
+          box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
+  height: 898px;
+  padding: 10rem 20rem; }
+  .pricing-form-container h3 {
+    text-align: left; }
+  .pricing-form-container input {
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: #ceddf2;
+    border-style: solid;
+    background-color: #fff;
+    height: 44px;
+    width: 584px;
+    margin: 1rem 0 2rem 0;
+    padding: 1rem; }
+  .pricing-form-container #checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem; }
+  .pricing-form-container .input-name {
+    max-width: 282px;
+    float: left; }
+    .pricing-form-container .input-name input {
+      max-width: 282px; }
+  .pricing-form-container .input-name:first-child {
+    margin-right: 20px; }
+  .pricing-form-container .form-terms {
+    font-weight: 700;
+    color: #ff5c72; }
+  .pricing-form-container .terms-and-conditions {
+    padding: 4rem 0 3rem 0; }
+    .pricing-form-container .terms-and-conditions a {
+      text-decoration: none; }
+    .pricing-form-container .terms-and-conditions a:hover {
+      cursor: pointer; }
+
+/*--------
+1. Variables
+--------*/
+.privacy-header {
+  text-align: left;
+  max-width: 721px;
+  margin-top: 6rem;
+  margin-bottom: 5rem; }
+  .privacy-header .privacy-title {
+    text-align: right; }
+
+.privacy-text {
+  max-width: 1010px; }

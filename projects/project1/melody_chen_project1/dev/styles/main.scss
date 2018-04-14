@@ -26,8 +26,8 @@ $box-shadow: rgba(125, 147, 178, 0.3);
 
 
 @import 'home';
-@import 'features';
 @import 'pricing';
+@import 'privacy';
 
 /*---------
 2. Styling All
@@ -48,6 +48,11 @@ html{
 	height: 100%;
 	body{
 		font-size: 1.6rem;
+		.wrapper{
+			max-width: 1920px;
+			// max-width: 80%;
+			margin: 0 auto;
+		}
 		.container{
 			max-width: 1530px;
 			// max-width: 80%;
@@ -56,6 +61,15 @@ html{
 
 		section{
 			padding: 10rem 0 10rem 0;
+		}
+
+		h1{
+			color: $headerColor;
+			font-size: 4.8rem;
+			font-weight: 300;
+			line-height: 7.2rem;
+			max-width: 600px;
+			margin: 0 auto;
 		}
 		
 		p{
@@ -78,6 +92,9 @@ html{
 			border: 0;
 			border-top: 1px solid $lightNavy;
 			padding: 0;
+		}
+		a{
+			text-decoration: none;
 		}
 	}
 }
@@ -103,6 +120,15 @@ Background
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	min-height: 550px;
+}
+
+//hot air balloon footer background
+.hot-air-balloon{
+    background-image: url(../images/page-footer-image.png);
+	background-position: bottom;
+    background-repeat: no-repeat;
+    height: 1700px;
 }
 
 /*--------
@@ -112,19 +138,20 @@ Buttons
 .button{
 	border-radius: 5px;
 	padding: 0.5rem 1.5rem;	
+	height: 4.8rem;
+	min-width: 205px;
 }
 .red-button{
 	background-color: $red;
 	color: $white;
 	// box-shadow: 10px 15px 20px $lightNavy;
-	box-shadow: 0px 20px 30px 0px     $box-shadow;
-    width: 205px;
-    height: 48px;
-
-;
+	box-shadow: 0px 20px 30px 0px $box-shadow;
 	border: none;
 	:hover{
-
+		//RED BUTTON HOVER EFFECT!!!!!!!!!!!!
+	}
+	a{
+		color: $white;
 	}
 }
 
@@ -155,6 +182,9 @@ Buttons
 	td{
 		width: 33.33%;
 	}
+	.nav-container{
+		padding: 3rem 0;
+	}
 }
 
 ul{	
@@ -166,9 +196,9 @@ ul{
 		list-style: none;
 		color: $headerColor;
 		display: inline-block;
+		padding-right: 2rem;
 		a{
 			color: $headerColor;
-			text-decoration: none;
 			border-radius: 5px;
 			padding: 2px 10px;
 		}
@@ -177,6 +207,13 @@ ul{
 			animation-name: toRedButtonHover;
 			animation-duration: 1s;
 			animation-fill-mode: forwards;  
+		}
+		.drop-down{
+			padding: 0 1rem;
+		}
+		#no-hover-effect:hover{
+			color: $white;
+			animation: none;
 		}
 	}
 }
@@ -202,7 +239,7 @@ ul{
 	position: relative;
 	//center
 	left: 50%;
-  	transform: translatex(-50%);
+  	transform: translatex(-80%);
 }
 
 //right nav
@@ -219,4 +256,32 @@ ul{
 }
 //nav END----------
 
-
+/*---------
+4. Footer
+----------*/
+.footer{
+	height: 250px;
+	line-height: 2rem;
+	.footer-top{
+		padding: 3rem 0;
+		img{
+			padding-right: 3rem;
+		}
+		li{
+			padding: 0 2rem;
+		}
+	}
+	a{
+		color: $pColor;
+	}
+	.social-media-links{
+		float: right;	
+	}
+	hr{
+		height: 1px;
+	}
+	p{
+		padding: 2rem 0;
+		margin: 0;
+	}
+}

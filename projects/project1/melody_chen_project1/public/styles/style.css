@@ -532,17 +532,21 @@ Privacy Page
     color: #fff;
     border: none; } }
 
-@-webkit-keyframes buttonMoveUp {
+@-webkit-keyframes toTransparentButton {
   from {
-    margin-bottom: 0px; }
+    background-color: #ff5c72;
+    border: none; }
   to {
-    margin-bottom: 2px; } }
+    background-color: rgba(255, 92, 114, 0.836);
+    border: 5px double #ff5c72; } }
 
-@keyframes buttonMoveUp {
+@keyframes toTransparentButton {
   from {
-    margin-bottom: 0px; }
+    background-color: #ff5c72;
+    border: none; }
   to {
-    margin-bottom: 2px; } }
+    background-color: rgba(255, 92, 114, 0.836);
+    border: 5px double #ff5c72; } }
 
 /*-------------------------
 3. Base for all three pages
@@ -626,16 +630,16 @@ html {
   -webkit-box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
           box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
   border: none; }
-  .red-button .red-button:hover {
-    background-color: transparent;
-    -webkit-animation-name: buttonMoveUp;
-            animation-name: buttonMoveUp;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
   .red-button a {
     color: #fff; }
+
+.red-button:hover {
+  -webkit-animation-name: toTransparentButton;
+          animation-name: toTransparentButton;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
 
 .clear-button {
   background-color: transparent;

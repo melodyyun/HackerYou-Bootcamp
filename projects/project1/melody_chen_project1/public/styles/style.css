@@ -1,3 +1,6 @@
+/*----------
+Home Page
+-----------*/
 .main-header {
   text-align: center;
   max-width: 800px;
@@ -123,6 +126,7 @@
     padding: 6rem; }
 
 @charset "UTF-8";
+/* normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -270,6 +274,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 /*--------
 1. Variables
 --------*/
+/*----------
+Home Page
+-----------*/
 .main-header {
   text-align: center;
   max-width: 800px;
@@ -394,9 +401,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
             transform: translate(-50%, -50%);
     padding: 6rem; }
 
-/*--------
-1. Variables
---------*/
+/*------------
+Pricing page
+-------------*/
 .pricing-header {
   margin-top: 6rem;
   margin-bottom: 5rem; }
@@ -447,9 +454,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     .pricing-form-container .terms-and-conditions a:hover {
       cursor: pointer; }
 
-/*--------
-1. Variables
---------*/
+/*------------
+Privacy Page
+-------------*/
 .privacy-header {
   text-align: left;
   max-width: 721px;
@@ -501,11 +508,41 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     #privacy .privacy-links li:hover {
       background-color: #e5f0ff; }
 
-/*---------
+/*-------------
 2. Styling All
-----------*/
+--------------*/
 * {
   font-family: 'Nunito', sans-serif; }
+
+@-webkit-keyframes toRedButtonHover {
+  from {
+    background: none;
+    color: #ff5c72; }
+  to {
+    background: rgba(255, 92, 114, 0.836);
+    color: #fff;
+    border: none; } }
+
+@keyframes toRedButtonHover {
+  from {
+    background: none;
+    color: #ff5c72; }
+  to {
+    background: rgba(255, 92, 114, 0.836);
+    color: #fff;
+    border: none; } }
+
+@-webkit-keyframes buttonMoveUp {
+  from {
+    margin-bottom: 0px; }
+  to {
+    margin-bottom: 2px; } }
+
+@keyframes buttonMoveUp {
+  from {
+    margin-bottom: 0px; }
+  to {
+    margin-bottom: 2px; } }
 
 /*-------------------------
 3. Base for all three pages
@@ -554,7 +591,7 @@ html {
       font-weight: 700; }
 
 /*---------
-Background 
+3.1 Background 
 -----------*/
 .backgroundDark {
   background-color: #eff6ff; }
@@ -575,7 +612,7 @@ Background
   background-repeat: no-repeat; }
 
 /*--------
-Buttons
+3.2 Buttons
 ---------*/
 .button {
   border-radius: 5px;
@@ -589,8 +626,14 @@ Buttons
   -webkit-box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
           box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
   border: none; }
-  .red-button :hover {
-    background-color: transparent; }
+  .red-button .red-button:hover {
+    background-color: transparent;
+    -webkit-animation-name: buttonMoveUp;
+            animation-name: buttonMoveUp;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
   .red-button a {
     color: #fff; }
 
@@ -626,17 +669,45 @@ Buttons
   display: none;
   position: absolute;
   background-color: #fafcff;
-  border: solid 2px #eff6ff;
   border-radius: 8px;
-  width: 150px; }
+  width: 150px;
+  -webkit-box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3);
+          box-shadow: 0px 20px 30px 0px rgba(125, 147, 178, 0.3); }
   .nav-dropdown a {
     display: block; }
+  .nav-dropdown a:hover {
+    color: white; }
   .nav-dropdown li {
     margin: 0;
     padding: 1rem; }
 
 #nav-home-button:hover .nav-dropdown {
   display: block; }
+
+.goog-te-gadget {
+  font-family: 'Nunito', sans-serif; }
+
+#google_translate_element img {
+  display: none; }
+
+#google_translate_element div {
+  background: transparent;
+  background-color: #eff6ff;
+  border: 0px solid transparent !important;
+  font-size: 1.6rem; }
+
+#google_translate_element a {
+  color: #4c6280; }
+
+#google_translate_element a:hover {
+  color: #fff;
+  background-color: #ff5c72; }
+
+#google_translate_element span {
+  border: 0px solid transparent !important; }
+
+.goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div, .goog-te-menu2 {
+  color: #4c6280; }
 
 ul {
   display: inline-block;
@@ -652,7 +723,6 @@ ul {
       border-radius: 5px;
       padding: 2px 10px; }
     ul li a:hover {
-      color: #ff5c72;
       -webkit-animation-name: toRedButtonHover;
               animation-name: toRedButtonHover;
       -webkit-animation-duration: 1s;
@@ -665,22 +735,6 @@ ul {
       color: #fff;
       -webkit-animation: none;
               animation: none; }
-
-@-webkit-keyframes toRedButtonHover {
-  from {
-    background: none;
-    color: #ff5c72; }
-  to {
-    background: rgba(255, 92, 114, 0.836);
-    color: #fff; } }
-
-@keyframes toRedButtonHover {
-  from {
-    background: none;
-    color: #ff5c72; }
-  to {
-    background: rgba(255, 92, 114, 0.836);
-    color: #fff; } }
 
 .main-nav img {
   line-height: 1.5;
@@ -726,9 +780,9 @@ ul {
     padding: 2rem 0;
     margin: 0; }
 
-/*--------
-1. Variables
---------*/
+/*------------
+Pricing page
+-------------*/
 .pricing-header {
   margin-top: 6rem;
   margin-bottom: 5rem; }
@@ -780,9 +834,9 @@ ul {
       cursor: pointer; }
 
 @charset "UTF-8";
-/*--------
-1. Variables
---------*/
+/*------------
+Privacy Page
+-------------*/
 .privacy-header {
   text-align: left;
   max-width: 721px;

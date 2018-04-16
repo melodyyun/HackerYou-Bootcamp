@@ -1,5 +1,9 @@
 'use strict';
 
+function googleTranslateElementInit() {
+    var gt = new google.translate.TranslateElement({
+        pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+}
 var app = {};
 
 // app.changeLanguage = () => {
@@ -18,20 +22,14 @@ var app = {};
 //     });
 // };
 
-function googleTranslateElementInit() {
-    var gt = new google.translate.TranslateElement({
-        pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
-    console.log(gt);
-}
-
-app.init = function () {
-    app.stylingGoogleTranslate();
-};
-
-// document ready;
-$(function () {
-    app.init();
-});
+// app.scroll = () =>{
+//     const privacySideMenu = $(".privacy-links");
+//     const win = $(window);
+//     win.on('scroll', function(){
+//         const top = win.scrollTop();
+//         privacySideMenu.css("top", `${top}`);
+//     });
+// };
 
 //https://codepen.io/j_holtslander/pen/PjPWMe
 //Pen BY Jay Holtslander
@@ -72,9 +70,12 @@ app.stylingGoogleTranslate = function () {
         // Change the iframe's box shadow
         $(".goog-te-menu-frame").css('box-shadow', '0px 20px 30px 0px rgba(125, 147, 178, 0.3)');
 
+        // Change en
+        // $("iframe").contents().find('goog-te-menu-value.span[0]').text("En");
+
         // Change the iframe's size and position?
         $(".goog-te-menu-frame").css({
-            'height': '45%',
+            'height': '420px',
             'width': '100%',
             'top': '0px'
         });
@@ -85,3 +86,15 @@ app.stylingGoogleTranslate = function () {
         });
     });
 };
+
+app.init = function () {
+    app.stylingGoogleTranslate();
+    // Change arrow
+    // $(".goog-te-menu-value span").eq(3).text('v');
+    // $("iframe").contents().find('.goog-te-menu-value span').eq(3).text('v');
+};
+
+// document ready;
+$(function () {
+    app.init();
+});

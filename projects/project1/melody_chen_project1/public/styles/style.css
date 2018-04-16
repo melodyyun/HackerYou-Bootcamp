@@ -37,7 +37,7 @@ Home Page
           box-shadow: 1px 1px 5px #ceddf2;
   padding: 3rem;
   margin-right: 1.5rem;
-  min-height: 500px; }
+  min-height: 550px; }
   .learnHow .feature-box p {
     min-height: 180px; }
 
@@ -268,6 +268,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 3. base styling for all three pages
 	3.1 background colors
 	3.2 button styling
+	3.3 form validation
 4. navigation
 5. footer
 */
@@ -313,7 +314,7 @@ Home Page
           box-shadow: 1px 1px 5px #ceddf2;
   padding: 3rem;
   margin-right: 1.5rem;
-  min-height: 500px; }
+  min-height: 550px; }
   .learnHow .feature-box p {
     min-height: 180px; }
 
@@ -467,7 +468,8 @@ Privacy Page
 
 #privacy {
   height: 2700px;
-  margin-top: -16rem; }
+  margin-top: -16rem;
+  position: relative; }
   #privacy .privacy-text {
     max-width: 1010px;
     float: left;
@@ -654,6 +656,13 @@ html {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
+/*------------------
+3.3 Form validation
+--------------------*/
+input:valid {
+  -webkit-box-shadow: 5px 5px 10px rgba(125, 147, 178, 0.3);
+          box-shadow: 5px 5px 10px rgba(125, 147, 178, 0.3); }
+
 /*---------
 4. Navigation
 ----------*/
@@ -688,9 +697,6 @@ html {
 #nav-home-button:hover .nav-dropdown {
   display: block; }
 
-.goog-te-gadget {
-  font-family: 'Nunito', sans-serif; }
-
 #google_translate_element img {
   display: none; }
 
@@ -702,10 +708,6 @@ html {
 
 #google_translate_element a {
   color: #4c6280; }
-
-#google_translate_element a:hover {
-  color: #fff;
-  background-color: #ff5c72; }
 
 #google_translate_element span {
   border: 0px solid transparent !important; }
@@ -755,7 +757,7 @@ ul {
 .nav-right {
   float: right;
   vertical-align: middle;
-  margin: 0; }
+  margin-top: 2px; }
 
 #en {
   background: transparent;
@@ -851,7 +853,8 @@ Privacy Page
 
 #privacy {
   height: 2700px;
-  margin-top: -16rem; }
+  margin-top: -16rem;
+  position: relative; }
   #privacy .privacy-text {
     max-width: 1010px;
     float: left;

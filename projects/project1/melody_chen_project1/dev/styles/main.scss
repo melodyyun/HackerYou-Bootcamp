@@ -6,6 +6,7 @@
 3. base styling for all three pages
 	3.1 background colors
 	3.2 button styling
+	3.3 form validation
 4. navigation
 5. footer
 */
@@ -194,6 +195,13 @@ html{
 		animation-fill-mode: forwards;  
 }
 
+/*------------------
+3.3 Form validation
+--------------------*/
+input:valid{
+	box-shadow: 5px 5px 10px $box-shadow;
+}
+
 /*---------
 4. Navigation
 ----------*/
@@ -236,10 +244,6 @@ html{
 }
 //styling google translate
 
-//doesn't work
-.goog-te-gadget {
-  font-family: 'Nunito', sans-serif;
-}
 #google_translate_element img{
 	display: none;
 }
@@ -251,11 +255,6 @@ html{
 }
 #google_translate_element a{
 	color: $headerColor;
-}
-//doesn't work
-#google_translate_element a:hover{
-	color: $white;
-	background-color: $red;
 }
 
 #google_translate_element span{
@@ -315,7 +314,7 @@ ul{
 .nav-right{
 	float: right;
 	vertical-align: middle;
-	margin: 0;
+	margin-top: 2px;
 }
 
 #en{

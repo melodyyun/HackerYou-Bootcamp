@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Airbnb Form</title>
+    <!--Loading Font Awesome-->
+    <script defer src='https://use.fontawesome.com/releases/v5.0.9/js/all.js' integrity='sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl' crossorigin='anonymous'></script>
+    
+    <style>
+    article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+    
+    .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+    
+    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+    body{
+        background-color: lightgray;
+    }
+    .modal{
+        background-color: #fff;
+        width: 450px;
+        margin: 50px auto auto auto;
+        padding: 25px;
+    }
+
+    .social-logins a{
+        text-decoration: none;
+        border: 1px solid #c4c4c4;
+        display: block;
+        padding: 20px;
+        text-align: center;
+        border-radius: 2px;
+    }
+    .fa-facebook-f, .fa-google{
+        display: inline-block;
+        float: left;
+    }
+
+    .fb-login{
+        margin-bottom: 5px;
+        background-color: #4568b2;
+    }
+
+    .google-login a{
+        color: #484848;
+    }
+
+    .fb-login a{
+        color: white;
+    }
+    .social-logins p{
+        text-align: center;
+        position: relative;
+    }
+
+    .social-logins p::after,
+    .social-logins p::before {
+       background: #c4c4c4;
+       content: '';
+       top: 7px;
+       height: 1px;
+       left: 0;
+       position: absolute;
+       width: 45%;  
+       z-index: 99;  
+    }
+
+    .social-logins p::after {
+       left: 55%;
+    }
+
+    .login input{
+        display: block;
+        border: 1px solid #c4c4c4;
+        display: block;
+        padding: 20px;
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 2px;
+    }
+
+    .login input[type=submit]{
+        color: white;
+        background-color: #ff5a5f;
+        border: 1px solid #ff5a5f;
+    }
+
+    .login input[type=email]{
+        background: url(air_bnb_icons/mail.png) 95% center no-repeat;
+    }
+
+    .login input[type=password]{
+        background: url(air_bnb_icons/lock.png) 95% center no-repeat;
+    }
+
+    #rememberMe{
+        float: left;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <div class="social-logins">
+            <div class="fb-login">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                    Log in with Facebook
+                </a>
+            </div>
+            <div class="google-login">  
+                <a href="#">
+                    <i class="fab fa-google"></i>
+                    Log in with Google
+                </a>
+            </div>
+            <p>or</p>
+        </div>
+        <form action="#" method="POST" class="login" name="login">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <div class="clearfix">
+                <input type="checkbox" name"rememberMe" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+            <input type="submit" id="submit-btn" value="Log in">
+        </form>
+        <div class="sign-up">
+            <p>Don't have an account?</p>
+            <a href="#">Sign up</a>
+        </div>
+    </div>
+</body>
+</html>

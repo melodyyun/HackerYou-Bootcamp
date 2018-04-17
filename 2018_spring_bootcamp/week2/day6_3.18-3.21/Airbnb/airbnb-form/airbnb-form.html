@@ -23,6 +23,7 @@
         width: 450px;
         margin: 50px auto auto auto;
         padding: 25px;
+        position: relative;
     }
 
     .social-logins a{
@@ -63,8 +64,7 @@
        height: 1px;
        left: 0;
        position: absolute;
-       width: 45%;  
-       z-index: 99;  
+       width: 45%;   
     }
 
     .social-logins p::after {
@@ -87,6 +87,23 @@
         border: 1px solid #ff5a5f;
     }
 
+    input[type=submit]:hover{
+        background-color: #ff7e82;
+        border: 1px solid #ff7e82;
+    }
+
+    input[type=submit]::after{
+        content: '';
+        /* background: #dce0e0; */
+        background-color: red;
+        height: 10px;
+        position: absolute;
+        width: 90%;
+        left: 0;
+        z-index: 999
+
+    }
+
     .login input[type=email]{
         background: url(air_bnb_icons/mail.png) 95% center no-repeat;
     }
@@ -95,10 +112,15 @@
         background: url(air_bnb_icons/lock.png) 95% center no-repeat;
     }
 
-    #rememberMe{
-        float: left;
+    .remember-pw{
+        /* float: left; */
+        display: inline-block;
+        width: 100%;
     }
 
+    #rememberMe{
+        width: 20px;
+    }
 
 
     </style>
@@ -123,7 +145,7 @@
         <form action="#" method="POST" class="login" name="login">
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
-            <div class="clearfix">
+            <div class="clearfix remember-pw">
                 <input type="checkbox" name"rememberMe" id="rememberMe">
                 <label for="rememberMe">Remember me</label>
                 <a href="#" class="forgot-password">Forgot password?</a>

@@ -1,0 +1,147 @@
+@import 'setup';
+
+$bodyFont: 'Cardo', serif;
+$titleFont: 'Open Sans', sans-serif;
+$brandColour: #9B9B9B;
+$blue: #565866;
+$beige: #B2AF9E;
+$grey: #65706E;
+
+@mixin fontSizer($scale) {
+	font-size: $scale * 1px;
+	font-size: ($scale / 10) * 1rem;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $bodyFont;
+	color: $brandColour;
+	@include fontSizer(16);
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+img {
+	max-width: 100%;
+}
+
+// Typography
+h1 {
+	font-family: $titleFont;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	font-size: 6rem;
+	font-weight: 800;
+	margin: 0;
+	color: white;
+}
+
+h2, h3 {
+	font-family: $bodyFont;
+	color: #545351;
+	font-weight: 400;
+	font-style: italic;
+	display: inline-block;
+	border-bottom: 1px solid $beige;
+	padding-bottom: 15px;
+}
+
+h2 { @include fontSizer(32); }
+h3 { @include fontSizer(28); }
+
+p {
+	@include fontSizer(16);
+	font-weight: 400;
+	line-height: 24px;
+}
+
+p.title {
+	font-family: $titleFont;
+	font-weight: 400;
+	color: white;
+}
+
+.wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+main.content {
+	text-align: center;
+}
+
+// header styles 
+header.top{
+	background: $blue url(../images/map.png) no-repeat center;
+	height: 100vh;
+	border: 10px solid white;
+}
+
+.headerFlex {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+nav.topBar {
+	display: flex;
+	justify-content: space-between;
+	& > * {
+		flex: 1 0 50%;
+	}
+	ul.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		li {
+			flex: 1 0 33.33%;
+			text-align: center;
+		}
+	}
+}
+
+.feature {
+	margin: auto;
+	text-align: center;
+	p {
+		color: white;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+
+
+
+.post {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	aside {
+		flex: 1 0 50%;
+	}
+	article {
+		flex: 1 0 50%;
+	}
+}
+
+
+
+
+
+
+
+

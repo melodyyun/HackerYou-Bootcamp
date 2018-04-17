@@ -20,15 +20,6 @@ const app ={};
 //     });
 // };
 
-// app.scroll = () =>{
-//     const privacySideMenu = $(".privacy-links");
-//     const win = $(window);
-//     win.on('scroll', function(){
-//         const top = win.scrollTop();
-//         privacySideMenu.css("top", `${top}`);
-//     });
-// };
-
 //https://codepen.io/j_holtslander/pen/PjPWMe
 //Pen BY Jay Holtslander
 
@@ -42,20 +33,10 @@ app.stylingGoogleTranslate = () => {
         $("iframe").contents().find(".goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div, .goog-te-menu2 *")
             .css({
                 'color': '#4c6280',
-                // 'background-color': '#fafcff'
             });
-        // Change menu's padding
-        // $("iframe").contents().find('.goog-te-menu2-item-selected').css('display', 'none');
-
-        // Change menu's padding
-        // $("iframe").contents().find('.goog-te-menu2').css('padding', '0px');
 
         // Change the padding of the languages
         $("iframe").contents().find('.goog-te-menu2-item div').css('padding', '10px');
-
-        // Change the width of the languages
-        // $("iframe").contents().find('.goog-te-menu2-item').css('width', '100%');
-        // $("iframe").contents().find('td').css('width', '100%');
 
         // Change hover effects
         $("iframe").contents().find(".goog-te-menu2-item div").hover(function () {
@@ -69,9 +50,6 @@ app.stylingGoogleTranslate = () => {
 
         // Change the iframe's box shadow
         $(".goog-te-menu-frame").css('box-shadow', '0px 20px 30px 0px rgba(125, 147, 178, 0.3)');
-
-        // Change en
-        // $("iframe").contents().find('goog-te-menu-value.span[0]').text("En");
 
         // Change the iframe's size and position?
         $(".goog-te-menu-frame").css({
@@ -89,9 +67,6 @@ app.stylingGoogleTranslate = () => {
 
 app.init = () => {
     app.stylingGoogleTranslate();
-    // Change arrow
-    // $(".goog-te-menu-value span").eq(3).text('v');
-    // $("iframe").contents().find('.goog-te-menu-value span').eq(3).text('v');
 };
 
 // document ready;

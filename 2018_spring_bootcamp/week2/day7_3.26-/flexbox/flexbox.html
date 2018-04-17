@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+    
+    .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+    
+    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+    
+    body {
+	font-family: sans-serif;
+	color: white;
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
+h2 {
+	color: grey;
+	font-weight: lighter;
+}
+
+.flexContainer {
+    border: lightgrey solid 2px;
+    height: 550px;
+		margin-bottom: 30px;
+		display: flex;
+
+/* 		flex-direction: row; */
+/* 		flex-direction: row-reverse; */
+/* 		flex-direction: column; */
+/* 		flex-direction: column-reverse; */
+	
+/* 		flex-wrap: wrap; */
+/* 		flex-wrap: nowrap; */
+/* 		flex-wrap: wrap-reverse; */	
+	
+			/*  main axis	 */
+/* 		justify-content: space-around; */
+/* 		justify-content: space-between; */
+/* 		justify-content: flex-end; */
+/* 		justify-content: flex-start; */
+/* 		justify-content: center; */
+
+			/*  secondary axis */
+/* 		align-items: flex-start; */
+/* 		align-items: flex-end; */
+/* 		align-items: center; */
+}
+
+.flexContainer .box {
+    width: 50px;
+    height: 50px;
+    background: tomato;
+    margin: 5px;
+	
+		/* 	can use this as a shorthand for centering content	 */
+		/* BUT using this will override any "self" values on children	 */
+/* 		margin: auto; */
+}
+
+.flexContainer .box-1 {
+		/* 	align-self = same values as align-items */
+/* 		align-self: flex-end; */
+
+    background: rebeccapurple;
+		/* 	note on accessibility: ordering only VISUALLY affects things */
+/* 		order: 1; */
+}
+
+.flexContainer .box-2 {
+		order: 3
+}
+
+/*  ALIGN CONTENT */
+
+.align-content {
+	  border: lightgrey solid 2px;
+		height: 550px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+		
+		/* applies space between the rows */
+/* 	only affects things that wrap	 */
+		/* won't notice a difference if there is only one row! */
+/* 		align-content: space-between; */
+/* 		align-content: flex-end; */
+/* 		align-content: center; */
+/* 		align-content: flex-start */
+}
+
+.align-content .box {
+	width: 50px;
+	height: 50px;
+	background: tomato;
+	margin: 5px;
+	padding: 5px;
+}
+
+/* FLEX GROW */
+
+.flex-grow {
+	display: flex;
+	flex-flow: row wrap;
+	border: lightgrey solid 2px;
+	margin-bottom: 30px;
+}
+
+.flex-grow .box {
+	width: 50px;
+	height: 50px;
+	background: tomato;
+	margin: 5px;
+	padding: 5px;
+}
+
+.flex-grow .box-1 {
+	background: rebeccapurple;
+	flex-grow: 4;
+/* 	flex-grow: 0.5; */
+}
+
+.flex-grow .box-2{
+	flex-grow: 1;
+}
+
+/* FLEX SHRINK */
+
+.flex-shrink {
+	border: lightgrey solid 2px;
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 30px;
+	align-items: center;
+}
+
+.flex-shrink .box {
+	height: 50px;
+	background: tomato;
+	margin: 5px;
+	padding: 5px;
+}
+
+.flex-shrink .box-1 {
+	background: rebeccapurple;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+}
+
+.flex-shrink .box-2 {
+		flex-grow: 1;
+/* flex-shrink: 0 means it won't shrink */
+    flex-shrink: 0;
+    flex-basis: 500px;
+}
+
+/* good example here: https://hychalknotes.s3.amazonaws.com/flex-shrink-example.html */
+
+/* FLEX BASIS */
+/* The initial/ideal size of the element but if that's not possible then follow flex grow and flex shrink */
+.flex-basis {
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 30px;
+	align-items: center;
+}
+
+.flex-basis .box {
+	height: 50px;
+	background: tomato;
+	margin: 5px;
+	padding: 5px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 200px;
+}
+</style>
+</head>
+<body>
+    <h2>Flex Box</h2>
+    <div class="flexContainer">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+    </div>
+    
+    <h2>Align Content</h2>
+    <div class="align-content">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+        <div class="box box-5"></div>
+        <div class="box box-6"></div>
+        <div class="box box-7"></div>
+        <div class="box box-8"></div>
+        <div class="box box-9"></div>
+        <div class="box box-10"></div>
+        <div class="box box-11"></div>
+        <div class="box box-12"></div>
+        <div class="box box-13"></div>
+        <div class="box box-11"></div>
+        <div class="box box-12"></div>
+        <div class="box box-13"></div>
+    </div>
+    
+    <h2>Flex Grow</h2>
+    <div class="flex-grow">
+        <div class="box box-1">flex-grow: 1</div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+    </div>
+    
+    <h2>Flex Shrink</h2>
+    <div class="flex-shrink">
+        <div class="box box-1">flex-shrink: 1</div>
+        <div class="box box-2"> flex-shrink: 0</div>
+    </div>
+    
+    <h2>Flex Basis</h2>
+    <div class="flex-basis">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+    </div>
+</body>
+</html>

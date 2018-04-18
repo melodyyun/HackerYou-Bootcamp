@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+        background: green;
+    }
+    /* when the screen get to 940 or smaller follow these rules */
+    @media(max-width:940px){
+        body{
+            background: pink;
+        }
+    }
+
+    @media(max-width:700px){
+        body{
+            background: blue;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 940px) {
+         /* for very specific device */
+    }
+
+    /* Height media query */
+    @media (max-height:600px){
+        body{
+        background: tomato;
+        }
+    }
+    @media (min-height: 667px) {
+    /* anything as high or higher than the iPhone 6 */
+
+    }
+    /* You can also mix and match them with width: */
+
+    @media (min-height: 667px) and (min-width:375px) {
+        /* anything as high or higher than the iPhone 6 */
+    }
+
+    /* orientation media query */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+    }
+
+    /* print */
+    @media print{
+        /* make the page look different printed */
+    }
+
+    .myButton {
+    background:url(images/buttonBG.png) center no-repeat;
+    }
+
+    /* use lower pixel assets and if the device has higher pixel load a different img */
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+         /* feed HiDPI screens a bigger background image */
+        .myButton {
+            background:url(images/buttonBG@2x.png) center no-repeat;
+                background-size: 50%;
+        }
+    }
+    </style>
+</body>
+</html>

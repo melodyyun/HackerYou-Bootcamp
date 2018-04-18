@@ -1,0 +1,29 @@
+// variables
+$pink: #d81b60;
+$grey: #aeb1b9;
+$black: #000f20;
+$white: #ffffff;
+
+$primary-font: 'Arial', sans-serif;
+$header-font: 'Times', serif;
+
+// mixin
+// much like a function
+// takes variables and creates code for you
+@mixin colors($background, $color){
+    background: $background;
+    color: $color;
+}
+
+@mixin fontSize ($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem ;
+}
+
+@mixin position($top, $left, $bottom, $right){
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

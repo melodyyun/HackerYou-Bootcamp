@@ -1,0 +1,3 @@
+terminal:
+
+npm i -S brain.js

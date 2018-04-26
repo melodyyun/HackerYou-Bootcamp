@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Black Jack</title>
+</head>
+<body>
+    <script>
+        //blackjack
+        // rules deal 3 cards 1-11
+        //check if total score is >21
+        // if it is console.log(bust) 
+        // else log "you win"
+
+        //tips make a score variable
+        // write a function that returns a random card num from 1-11
+        // write a loop that draws 3 cards plus updates the score
+        // write a function to check for a win
+
+        let score;
+        const cards = [];
+
+        const threeRandomNums = () => {
+                for (let i = 1; i <= 3; i++) {
+                    let randomCard = Math.floor((Math.random() * 11) + 1);
+                    cards.push(randomCard);
+                }
+            }
+
+        const drawThreeCards = () => {
+            threeRandomNums();
+            console.log(`Your cards are: ${cards}`);
+        }
+        
+        const playBlackJack = () => {
+            drawThreeCards();
+
+            function add(a, b) {
+                return a + b;
+            }
+
+            const sum = cards.reduce(add, 0);
+            console.log(`Your cards add up to: ${sum}`);
+            if(sum>21){
+                console.log('BUST!');
+            }else{
+                console.log('You win!');
+            }
+        }
+
+        playBlackJack();
+        
+
+    </script>
+</body>
+</html>

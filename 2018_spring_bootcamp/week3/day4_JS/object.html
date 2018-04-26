@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        const hackerYou = {
+            students: 100,
+            address: '483 Queen West',
+            courses: {
+                partTime: 'html css',
+                fullTime: 'html css javascript'
+            }
+        }
+        const student = {
+            id: 507922,
+            name: 'Melody',
+            age: '15',
+            GPA: '4.5',
+            highschool: 'Central Peel'
+        }
+        console.log(`The student ${name}is ${student['age']} years old and has a GPA of ${student.GPA} at ${student['highschool']}`);
+
+        const clothing = {
+            socks: 34,
+            shoes: 2,
+            pants: 3
+        }
+
+        //for (let variable in object){
+            //do something
+        //}
+        for(let item in clothing){
+            //if we use clothing.item it will look for a 'item' inside of clothing
+            //whenever you are using a variable with an object use [] notation
+            console.log(`I have ${clothing[item]} ${item}`);
+        }
+
+        const candyBag = {
+            coffeeCrip: 34,
+            twix: 2,
+            snickers: 3
+        }
+
+        for(let treat in candyBag){
+            console.log(`I'm going to eat ${candyBag[treat]} ${treat}`);
+        }
+        
+
+        //example 1
+        const inventory = {
+                apples: 2,
+                oranges: 3,
+                bananas: 6,
+                milk: 2
+            }
+
+        //Use the inventory object to print a string that looks like this: "We have 2 apples, 3 oranges, 6 bananas, and 2 milk in stock."
+
+        console.log(`We have ${inventory.apples} apples, ${inventory.oranges} oranges, ${inventory.bananas} bananas, and ${inventory.milk} milk in stock.`)
+
+        //Level 2 Iterate over the inventory object and print a list of the items. The output should look like this:
+
+        for(let items in inventory){
+            console.log(`There are ${inventory[items]} ${items}`)
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variables</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    
+    <script>
+        
+        // Create a simple "rock-paper-scissors" game.Prompt the user to enter their choice of "rock", "paper" or "scissors" and store this value in a variable.Always compare the user's input with the value "rock" (we'll work on making this more dynamic later).If the user's input is "paper" then print to the console "You Win!". If the input is "rock" then print "Tie" and print "You Lose" if the user's input is "scissors".
+
+        const userInput = (prompt("rock, paper, or scissors?")).toLowerCase();
+        console.log(userInput);
+
+        if(userInput === 'rock'){
+            console.log('You tied');
+        }else if(userInput === 'paper'){
+            console.log('You Lose :(');
+        }else if(user === 'scissors'){
+            console.log('You win!! :D');
+        }else{
+            console.log('please input rock, paper, or scissors');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Don't forget to open your console to see the output!</p>
+	<script>
+
+		const stringToNum = (string) => {
+			return parseInt(string);
+		}
+		//EXERCISE 1
+		//1. Ask the user for their age.
+		const userInput = prompt('How old are you?');
+		const userAge = stringToNum(userInput);
+		//2. Store the answer and convert their age into seconds.
+		const days = 356.25;
+		const hours = 24;
+		const minutes = 60;
+		const seconds = 60;
+
+		const userAgeInSeconds = userAge * days * hours * minutes * seconds;
+		//3. Log into the console their age in seconds.
+		
+		//4. Try concatenating the answer into a sentence: Your age in seconds is --.
+
+		console.log(`Your age in seconds is: ${userAgeInSeconds}`);
+
+		//EXERCISE 2
+		//1. Create 3 variables that asks the user for three numbers.
+		//2. Use a function to find the maximum of the three.
+		//3. Log the answer into the console using the sentence: The maximum number is --.
+		const num1 = stringToNum(prompt('Enter number 1'));
+		const num2 = stringToNum(prompt('Enter number 2'));
+		const num3 = stringToNum(prompt('Enter number 3'));
+		
+		const largestNum = Math.max(num1, num2, num3);
+
+		console.log(`The maximum number is: ${largestNum}`);
+		
+		// EXERCISE 3
+		// Write some code that finds the youngest person out of three ages.
+		// Log into the console the sentence: The youngest person is -- years old.
+		
+		const age1 = stringToNum(prompt('Enter age of person 1'));
+		const age2 = stringToNum(prompt('Enter age of person 2'));
+		const age3 = stringToNum(prompt('Enter age of person 3'));
+
+		const youngestPerson = Math.min(age1, age2, age3);
+
+		console.log(`The youngest person is: ${youngestPerson}`);
+
+
+		// EXERCISE 4
+		// Write some code that returns a random number between 1 and 100.
+		// Log into the console the sentence: Your random number is --.
+		// Bonus points for returning a whole number (no decimals).
+    	// Hint: Look into Math.random and Math.round
+		
+		const randomNum = Math.floor((Math.random()*100)+1);
+		console.log(`Your random number is ${randomNum}`)
+
+
+		// EXERCISE 5
+		// Write some code that adds sales tax to a price.
+		// Log into the console the sentence: "The total price with tax is $--."
+		// Bonus points if you can get it to show 2 decimals. (Google it!)
+		
+		//can also use number(prompt('How much did the item cost?');
+		const price = stringToNum(prompt('How much did the item cost?'));
+		const salesTax = 1.13;
+		const total = (price * salesTax).toFixed(2);
+
+		console.log(`The total price with tax is $${total}`);
+
+
+
+	</script>
+</body>
+</html>
+
+

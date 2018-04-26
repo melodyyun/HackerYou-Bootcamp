@@ -1,26 +1,51 @@
-const result = network.run();
+const network = new brain.NeuralNetwork();
 
-const input = document.querySelector("input")
-const example = document.querySelector("#example")
+const input = document.querySelector("input");
+const example = document.querySelector("body");
+const ghost = $('.ghost');
+const discoBall = $('.disco-ball');
+const eyeBrows = $('.eyebrows');
+const eyeBrowLeft =$('.eyebrow-left');
+const eyeBrowRight =$('.eyebrow-right');
+const speech = $('.speech-container');
 
 input.addEventListener("change", (e) => {
     const rgb = getRgb(e.target.value);
-    const network = new brain.NeuralNetwork()
     console.log(rgb);
     network.train([
-        { input: { r: 0.62, g: 0.72, b: 0.88 }, output: { light: 1 } },
-        { input: { r: 0.1, g: 0.84, b: 0.72 }, output: { light: 1 } },
-        { input: { r: 0.33, g: 0.24, b: 0.29 }, output: { dark: 1 } },
-        { input: { r: 0.74, g: 0.78, b: 0.86 }, output: { light: 1 } },
-        { input: { r: 0.31, g: 0.35, b: 0.41 }, output: { dark: 1 } },
-        { input: { r: 1, g: 0.99, b: 0 }, output: { light: 1 } },
-        { input: { r: 1, g: 0.42, b: 0.52 }, output: { dark: 1 } },
+        //white
+        { input: { r: 1, g: 1, b: 1 }, output: { light: 1 } },
+        //red
+        { input: { r: 1, g: 0, b: 0 }, output: { light: 1 } },
+        //green
+        { input: { r: 0, g: 1, b: 0 }, output: { light: 1 } },
+        //blue
+        { input: { r: 0, g: 0, b: 1 }, output: { light: 1 } },
+        
+        //black
+        { input: { r: 0, g: 0, b: 0}, output: { dark: 1 } },
     ])
 
-    const result = brain.likely(rgb, network)
+    let result = brain.likely(rgb, network);
+
     console.log(result);
     example.style.background = e.target.value
-    example.style.color = result === "dark" ? "white" : "black"
+    example.style.color = result === "dark" ? "white" : "black";
+
+    if (result === "dark") {
+        discoBall.fadeOut();
+        ghost.empty();
+        ghost.append(`<img src="assets/cute-ghost-white.png" alt="cute ghost white colour">`);
+        eyeBrows.css('background', 'white');
+        eyeBrowLeft.css('transform', 'rotate(15deg)');
+        eyeBrowRight.css('transform', 'rotate(-15deg)');
+        speech.fadeIn();
+    } else {
+        discoBall.fadeIn();
+        ghost.empty();
+        ghost.append(`<img src="assets/cute-ghost.png" alt="cute ghost">`);
+        speech.fadeOut();
+    }
 })
 
 function getRgb(hex) {
@@ -36,3 +61,23 @@ function getRgb(hex) {
         b: Math.round(parseInt(result[3], 16) / 2.55) / 100,
     } : null;
 }
+
+// { input: { r: 1, g: 0, b: 0.24 }, output: { light: 1 } },
+// { input: { r: 1, g: 0.91, b: 0.65 }, output: { light: 1 } },
+// { input: { r: 1, g: 0.72, b: 0 }, output: { light: 1 } },
+// { input: { r: 0.67, g: 1, b: 0 }, output: { light: 1 } },
+// { input: { r: 0.43, g: 1, b: 0.05 }, output: { light: 1 } },
+// { input: { r: 0.68, g: 0, b: 0.15 }, output: { light: 1 } },
+// { input: { r: 0, g: 0.03, b: 0.69 }, output: { light: 1 } },
+// { input: { r: 0.02, g: 0.45, b: 0.4 }, output: { light: 1 } },
+// { input: { r: 0, g: 0.33, b: 0.61 }, output: { light: 1 } },
+// { input: { r: 0.09, g: 0, b: 0.61 }, output: { light: 1 } },
+// { input: { r: 0.61, g: 0, b: 0.06 }, output: { light: 1 } },
+// { input: { r: 0.44, g: 0.04, b: 0 }, output: { light: 1 } },
+// { input: { r: 0, g: 0.06, b: 0.38 }, output: { light: 1 } },
+// { input: { r: 0, g: 0.13, b: 0.36 }, output: { light: 1 } },
+// { input: { r: 0.16, g: 0.28, b: 0.29 }, output: { light: 1 } },
+// { input: { r: 0, g: 0, b: 0 }, output: { dark: 1 } },
+// { input: { r: 0.22, g: 0.22, b: 0.22 }, output: { dark: 1 } },
+// { input: { r: 0, g: 0.12, b: 0.02 }, output: { dark: 1 } },
+// { input: { r: 0.02, g: 0.12, b: 0 }, output: { dark: 1 } },

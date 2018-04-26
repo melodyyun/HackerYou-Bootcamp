@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animation</title>
+    <style>
+        @keyframes snow {
+            0%{
+                top:0;
+            }
+            20%, 40%{
+                margin-left: 100px;
+            }
+            30%, 70%{
+                margin-left: 10px;
+            }
+            100%{
+                top: 100%;
+            }
+        }
+
+        @keyframes snow2 {
+            0%{
+                top: 0;
+                left: 40px;
+            }
+            15%, 60%, 90%{
+                margin-left: 100px;
+            }
+            20%, 80%{
+                margin-left: 70px;
+            }
+            100%{
+                top: 100%;
+            }
+        }
+
+        @keyframes snow3 {
+            0%{
+                top: 0;
+                left: 300px;
+            }
+            10%, 30%, 70%{
+                margin-left: 40px;
+            }
+            20%, 50%, 90%{
+                margin-left: 5px;
+            }
+            100%{
+                top: 100%;
+            }
+        }
+
+        body{
+            background: lightblue;
+        }
+
+        .snowflake{
+            position: absolute;
+            font-size: 55px;
+            color: whitesmoke;
+        }
+
+        .snowflake1{
+            animation: snow 3s linear infinite;
+        }
+
+        .snowflake2{
+            animation: snow2 4s ease-in-out infinite;
+        }
+
+        .snowflake3{
+            animation: snow3 5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="snowflake snowflake1">&#10052;</div>
+    <!-- unicode snowflake -->
+    <div class="snowflake snowflake2">&#10052;</div>
+    <div class="snowflake snowflake3">&#10052;</div>
+    <div class="snowflake snowflake4">&#10052;</div>
+    <div class="snowflake snowflake5">&#10052;</div>
+    <div class="snowflake snowflake6">&#10052;</div>
+    <div class="snowflake snowflake7">&#10052;</div>
+</body>
+</html>

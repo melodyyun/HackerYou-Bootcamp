@@ -4,90 +4,51 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-html, body{
-  height: 100%;
-}
-body {
-  font-family: helvetica neue;
-  background: #fff;
+$mainBlue: #a6b8eb;
+
+body{
+    background: $mainBlue;
 }
 
-input{
-  border: 1px solid white !important;
-  padding: 0px !important;
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
-  display: block;
+.main-header{
+    background: darken($mainBlue,20);
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 0 25px;
+    @media (max-width: 800px){
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-.disco-ball{
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  left: 50px;
-  display: none;
+.main-nav ul{
+    display: flex;
+    list-style: none;
+    li{
+        padding: 15px 25px;
+        margin-left: 5px;
+        border-radius: 3px;
+        &:hover{
+            background: darken($mainBlue,50);
+        }
+    }
 }
 
-.speech-container{
-  position: relative;
-  margin-top: 40px;
-  display: none;
-}
-.speech{
-  color: black;
-  background: white;
-  border-radius: 20px;
-  width: 300px;
-  height: 120px;
-  padding: 20px;
-  text-align: center;
-  margin: 0 auto;
-}
-.speech::after{
-  content: '';
-  border-top: 20px solid white;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  position: absolute;
-  top: 119px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.ghost-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5rem;
-  position: relative;
-}
-.eyebrows{
-  /* background: white; */
-  background: black;
-  width: 50px;
-  height: 15px;
-  border-radius: 50%;
-  position: absolute;
-  top: 80px;
-  transition: all 0.5s ease-in;
-}
-.eyebrow-left{
-  left: 40%;
-  transform: rotate(-15deg);
-  transition: all 0.5s ease-in;
-}
 
-.eyebrow-right{
-  right: 40%;
-  transform: rotate(15deg);
-  transition: all 0.5s ease-in;
-}
+@media(max-width: 800px){
+    .main-header{
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        li{
+            margin: 0;
+        }
+    }
 
-.ghost{
-  width: 300px;
-  height: auto;
-}
-
-img{
-  width: 100%;
 }

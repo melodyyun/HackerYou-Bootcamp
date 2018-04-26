@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid</title>
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns: 
+            [wrapper-start]1fr 
+            [wrapper-end aside-start]3fr 
+            1fr; */
+            /* grid-template-columns: repeat(3, minmax(100px 500px)); */
+            grid-template-columns: 1fr minmax(200px, 750px) 1fr;
+            grid-template-rows: 300px 100px;
+            grid-gap: 50px;
+            /* grid-auto-flow: column; */
+            grid-auto-rows: 1fr;
+            /* puts things out of order in places that have space */
+            /* grid-auto-flow: dense; */
+        }
+        .item{
+            /* height: 100px; */
+            /* width: 100px; */
+            background: darkcyan;
+            margin: 0px;
+        }
+        .item2{
+            background: mediumslateblue;
+            /* can use neg nums if you know you want to go to the end */
+            /* grid-column-start: span 2;
+            grid-column-end: -1; */
+            /* grid-column: span 2 / -1; */
+        }
+        .item13{
+            background: olivedrab;
+            /* grid-row: span 2; */
+            /* this will only go to the bottom explicit grid */
+            /* grid-row: 1 / -1;
+            grid-row: 1 / 7;
+            grid-column: wrapper-end/ span2; */
+        }
+
+        /* creating wrapper with grid */
+        .container > * {
+            grid-column: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="item item1">item1</p>
+        <p class="item item2">item2</p>
+        <p class="item item3">item3</p>
+        <p class="item item4">item4</p>
+        <p class="item item5">item5</p>
+        <p class="item item5">item5</p>
+        <p class="item item5">item5</p>
+        <p class="item item13">item5</p>
+        <p class="item item5">item5</p>
+        <p class="item item5">item5</p>
+        <p class="item item5">item5</p>
+        <p class="item item5">item5</p>
+        <p class="item item5">item5</p>
+        <p class="item item5">item5</p>
+    </div>
+</body>
+</html>

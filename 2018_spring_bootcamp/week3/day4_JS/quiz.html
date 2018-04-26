@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Level 1 Log into the console the numbers between 5 and 12.
+        console.log('Level 1');
+    for(let i=5; i<=12; i++){
+        console.log(i);
+    }
+
+    //Level 2. Log into the console the numbers between 1 and 10 in reverse (i.e. starting with 10). The output should look something like this:
+        console.log('Level 2');
+    for(let i=10; i>0; i--){
+        console.log(i);
+    }
+
+    //Level 3. Print the even numbers between 1 and 20. The output should look something like this:
+        console.log('Level 3');
+    for (let i = 0; i <= 20; i++) {
+        if(i%2 === 0){
+            console.log(i);
+        }
+    }
+
+    //Level 4. Print the numbers from 1 to 100. But for multiples of 3 print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiple of both 3 and 5, print “FizzBuzz”. The output should look something like this:
+        console.log('Level 4');
+    for(let i = 1; i <= 100; i++){
+        if(i%3 === 0 && i%5 ===0){
+            console.log('fizzbuzz');
+        }else if(i%5 === 0){
+            console.log('buzz');
+        }else if(i%3 === 0){
+            console.log('fizz');
+        }else{
+            console.log(i);
+        }
+    }
+
+    //create a function that will alert your name
+    const sayMyName = () => {
+        alert('Melody');
+    }
+
+    sayMyName();
+    </script>
+</body>
+</html>

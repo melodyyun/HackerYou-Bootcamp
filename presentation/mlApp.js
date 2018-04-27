@@ -8,6 +8,7 @@ const eyeBrows = $('.eyebrows');
 const eyeBrowLeft =$('.eyebrow-left');
 const eyeBrowRight =$('.eyebrow-right');
 const speech = $('.speech-container');
+const ghostContainer = $('.ghost-container');
 
 input.addEventListener("change", (e) => {
     const rgb = getRgb(e.target.value);
@@ -39,12 +40,17 @@ input.addEventListener("change", (e) => {
         eyeBrows.css('background', 'white');
         eyeBrowLeft.css('transform', 'rotate(15deg)');
         eyeBrowRight.css('transform', 'rotate(-15deg)');
-        speech.fadeIn();
+        speech.css('visibility', 'visible');
+        ghostContainer.removeClass('animated');
     } else {
         discoBall.fadeIn();
         ghost.empty();
         ghost.append(`<img src="assets/cute-ghost.png" alt="cute ghost">`);
-        speech.fadeOut();
+        speech.css('visibility', 'hidden');
+        eyeBrows.css('background', 'black');
+        eyeBrowLeft.css('transform', 'rotate(-15deg)');
+        eyeBrowRight.css('transform', 'rotate(15deg)');
+        ghostContainer.addClass('animated');
     }
 })
 

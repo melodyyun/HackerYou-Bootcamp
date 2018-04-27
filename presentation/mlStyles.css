@@ -4,6 +4,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+
+
 html, body{
   height: 100%;
 }
@@ -32,7 +34,8 @@ input{
 .speech-container{
   position: relative;
   margin-top: 40px;
-  display: none;
+  visibility: hidden;
+  /* transition: all 0.5s ease-in; */
 }
 .speech{
   color: black;
@@ -58,7 +61,8 @@ input{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5rem;
+  margin: 5rem auto;
+  width: 300px;
   position: relative;
 }
 .eyebrows{
@@ -69,25 +73,27 @@ input{
   border-radius: 50%;
   position: absolute;
   top: 80px;
-  transition: all 0.5s ease-in;
+  /* transition: all 0.5s ease-in; */
 }
 .eyebrow-left{
-  left: 40%;
+  left: 80px;
   transform: rotate(-15deg);
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .eyebrow-right{
-  right: 40%;
+  right: 80px;
   transform: rotate(15deg);
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .ghost{
   width: 300px;
   height: auto;
+  /* transition: all 0.5s ease-in; */
 }
 
 img{
   width: 100%;
+  /* transition: all 0.5s ease-in; */
 }

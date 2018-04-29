@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10 million coin flips</title>
+</head>
+<body>
+  <script>
+    /* A coin flip is a 50/50 chance that you will get heads or tails.
+
+    If you flip a coin 100 times, how many of them will be heads and how many will be tails? Sometimes you get 55/45, maybe even 60/40.
+
+    Let's make a coin flipping machine in JavaScript that flips a virtual "coin" 100 times and tells us the results. Way faster than doing this by hand!
+
+    So, to approach it from a programming perspective: */
+    
+    let heads = 0;
+    let tails = 0;
+    // 1. Write a flip() function that flips a coin and returns heads or tails based on a random number.
+    
+    const flip = () => {
+      return Math.floor(Math.random()*2);
+    };
+
+    // 2. Write a function flipMany() that calls flip() 100 times.  It should record a running tally of heads and tails. Return an object of the final results. ie. {"heads": 20, "tails": 80}
+    
+    const flipMany = () => {
+      for(let i = 1; i<=100; i++){
+        if(flip() === 1){
+          heads++
+        }else{
+          tails++
+        }
+      }
+    };
+
+    flipMany();
+
+    // 3. Call you flipMany() function and use document.write() to print a sentence summarizing the results.
+    // HINT: document.write() is way to print info from JavaScript into the page HTML. It's not used in best practice, but until we learn some more, we can use it to quickly display info.  Look it up if you're not sure how it works.
+    document.write(`You've flipped 100 times and got ${heads} heads and ${tails} tails`);
+
+
+
+    /* ------------------ HELPFUL HINTS --------------------------
+    * If you get stuck breaking down each piece into smaller
+    * steps that JavaScript can understand, here's some guidelines
+    * for your pseudocode.
+
+    1. flip()
+      - create a variable to hold the result of a single coin flip
+      - use Math.random to generate a random number that is either 0 or 1. see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random for reference and try logging out the result to verify your randomizer is working before moving on to the next step
+      - if the result is 0, return "heads", otherwise, return "false"
+
+    2. flipMany()
+      - create a function called flipMany()
+      - create two varibles to hold a tally of the number of tails and the number of heads
+      - write a for loop that runs 100 times, inside the loop:
+      - call your flip() function and store the result in a variable
+      - if the result is heads, add to the heads talls, otherwise, add ot the tails tally
+      - once the loop completes, return the two tally values in and object
+
+    3. flip!
+      - call your flipMany() function and store the results object in a variable
+      - print the values from the results object to the page using document.write and concatenation
+
+    */
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

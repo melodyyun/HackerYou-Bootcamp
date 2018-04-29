@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Warrior</title>
+</head>
+<body>
+    
+    <script>
+        const warrior = {
+            equipment: ['sword', 'shield'],
+            energy: 100,
+            location: {
+                x:0,
+                y:0,
+            },
+            walk: function(deltaX, deltaY){
+                this.location.x += deltaX;
+                this.location.y += deltaY;
+                console.log(`warrior has moved to location: X: ${this.location.x} and Y ${this.location.y}`);
+            },
+            strike: function(force){
+                //current energy - force
+                this.energy -= force;
+                console.log(`warrior has lossed ${force}HP. Remaining HP is: ${this.energy}`);
+            },
+            pickUpEquipment: function(item){
+                this.equipment.push(item);
+                console.log(`the warrior is carrying ${this.equipment}`);
+            }
+        };
+
+        const dog = {
+            name: 'Aspen',
+            age: 4,
+            energy: 100,
+            toys: ['squeaky', 'duck', 'ball', 'squeaky spider', 'bone'],
+            goodBoyTreats: 0,
+            eat: function(calories){
+                const energyChange = calories/10;
+                if(this.energy+energyChange>100){
+                    this.energy = 100;
+                    console.log(`${this.name} pupper is now full!`);
+                }else{
+                    this.energy += energyChange;
+                    console.log(`${this.name} pupper's energy is at ${this.energy}`);
+                }
+            },
+            getToy: function(toy){
+                this.toys.push(toy);
+                console.log(`${this.name} pupper got a new ${toy} to add to his collection. He now has ${this.toys}`);
+            },
+            doTrick: function(numberOfTricks){
+                if(this.energy<0){
+                    this.energy = 0;
+                    this.goodBoyTreats -= numberOfTricks;
+                    console.log(`${this.name} is too tired and failed to do his trick. ${this.name} pupper lost ${this.goodBoyTreats} treats`);
+                }else{
+                    this.goodBoyTreats += numberOfTricks;
+                    this.energy -= numberOfTricks*10
+                    console.log(`${this.name} pupper did well and got ${this.goodBoyTreats} treats`);
+                    console.log(`${this.name} pupper lost some energy, his energy is now at ${this.energy}`);
+                }
+            },
+
+        }
+    </script>
+</body>
+</html>

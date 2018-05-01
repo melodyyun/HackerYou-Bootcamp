@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery To Do List App</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    ul li {
+      cursor: move;
+    }
+
+    ul{
+      padding-left: 0;
+    }
+    li{
+      list-style: none;
+    }
+    .fa{
+      padding-right: 1rem;
+    }
+    .done{
+      color: gray;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="page-header"> <h1>jQuery To Do List App</h1></div>
+    <form>
+      <input class="form-control input-lg" type="text" placeholder="Add an item..." required>
+    </form>
+    <ul>
+      <!-- To do items get added dynamically here -->
+    </ul>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+  $(function(){
+    //allow the user to write in the input
+    //when the user hits enter, we need to capture what they entered
+    //with that data we should add it to the ul on the page 
+    $('form').on('submit', function(e){
+      e.preventDefault();
+      const $input = $('input[type=text]');
+      const $userInput = $input.val();
+      console.log($userInput);
+      const ul = $('ul');
+
+      if($userInput==" "){
+
+      }else{
+        ul.append(`<li>
+                    <span class='fa fa-square-o'></span>
+                      ${$userInput} <button>Remove</button>
+                  </li>`);
+      }
+      //reset form
+      //$(this).reset;
+      $('input[type=text]').val("");
+    });
+    //bonus add a checkbox 
+    // $(** parentElement **).on(event, ** childElement **, function () {
+    //   // do something
+    // });
+    $('ul').on('click', 'li', function(){
+      const $checkbox = $(this).find('.fa');
+      $checkbox.toggleClass('fa-square-o fa-check-square-o');
+      // $(this).toggleClass('text-muted');
+      $(this).toggleClass('done');
+      console.log('clicked li');
+    });
+
+    $('ul').on('click', 'button', function(e){
+      //when button is clicked the event bubbles up so that is shows that the li is clicked as well (because we have an event listener on the parent of the button, the li). To stop both events from firing we need e.stopPropagation();
+      e.stopPropagation();
+      $(this).parent().remove();
+      
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>functional</title>
+</head>
+<body>
+    <div class="movieGenres">
+
+    </div>
+    <!--Loading jQuery-->
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+    <script>
+        //map method will work on an array and allow us to run a function for each element in the array
+        //depending on what we return from that function, that will be added into a brand new array
+        //array.map(function(){...});
+        const numbers = [20,1,30,29,4,89,2];
+        const doubledNumbers = numbers.map((number)=>{
+            return number*2;
+        });
+        // console.log(doubledNumbers, numbers);
+
+        const persons = [
+                { first: 'Taylor', last: 'Swift' },
+                { first: 'Ash', last: 'Ketchum' },
+                { first: 'Hermione', last: 'Granger' }
+            ];
+        const fullNames = persons.map((person)=>{
+            return `${person.first} ${person.last}`;
+        });
+        // console.log(fullNames);
+        
+        //filter works like map with one key different
+        //Whatever we return from the call back function has to be a boolean value, true/false
+        //if it evaluates to true, that current element will be added to a new array
+        //if it is false we forget about it
+        //array.filter(fuction(){...}); -> must evaluate to either true or false
+        const users = [
+                { name: 'Spider-Man', age: 16 },
+                { name: 'Charlie Kelly', age: 25 },
+                { name: 'Gandalf the Grey', age: 90 },
+                { name: 'Prudence Thunder', age: 9 }
+            ];
+
+        const ofAge = users
+        .filter((user)=>{
+            //will evalute and if it's true then it will be put into a brand new array
+            return user.age >= 19;
+        })
+        .map((user)=>{
+            return user.name;
+        }); //chaining methods
+        // console.log(ofAge);
+        
+        
+        // const ofAgeForLoop = [];
+        // for(let i = 0; i<users.length; i++){
+        //     if(users[i].age>=19){
+        //         ofAgeForLoop.push(user[i]);
+        //     }
+        // }
+
+        //forEach loops
+        const genres = ["Horror", "Comedy", "Drama", "Action", "Suspense", "Documentary"];
+        genres.forEach((genre)=>{
+            $('.movieGenres').append(`<p>${genre}</p>`);
+        });
+
+        //array.reduce()
+        //reduce is different because reduce doesn't just have to return an array. It can return anything
+        //reduce accepts 2 parameters
+        //call back funtion and 0(the accumulator)
+
+
+        const numbersToAddUp = [14, 51, 4613, 452, 7, 7];
+        const sum = numbersToAddUp.reduce((accumulator,currentValue)=>{
+            console.log(accumulator, currentValue);
+            return accumulator + currentValue;
+        },0);
+        console.log(sum);
+
+        //can use reduce to flatten arrays
+        const numsArray = [
+            [1, 2, 3],
+            [4, 5, 6], 
+            [7, 8, 9]
+        ];
+
+        const flatArray = numsArray.reduce((acc, curr)=>{
+            return acc.concat(curr);
+        }, []);//not starting with 0 because these aren't numbers right now we want to start with an empty array
+        console.log(flatArray);
+        
+
+    </script>
+</body>
+</html>

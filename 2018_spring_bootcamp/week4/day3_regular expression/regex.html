@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regex</title>
+</head>
+<body>
+    <script>
+        let name = 'HackerYou';
+        //replace takes regular expression and replaces it with a string
+        //replace is a string method
+        let newName = name.replace(/You/, 'U');
+
+        const lowerCaseSchool = 'hackeryou';
+        //[means there are options]
+        let newSchoolName = lowerCaseSchool.replace(/[Yy]ou/, 'You');
+        let newSchoolName = lowerCaseSchool.replace(/You/i, 'You');
+        // i  is a case insentive flag
+        // g  is global flag so it will change all the words not just the first one. 
+
+        'Hackeryou is a cool school called hackerYou'.replace(/You/ig, "U");
+
+        // patter: /^[a-z0-9_-]{3,16}$/
+        // Let's break down what's happening here:
+        // ^ => find the beginning of a string
+        //[a - z0 -9_ -] => followed by any lowercase letter(a - z), number(0 - 9), an underscore or a hyphen 
+        // { 3, 16 } => make sure that there are at least 3 characters, but no more than 16 
+        //$ / => Notes the end of the string
+        
+
+    </script>
+</body>
+</html>
